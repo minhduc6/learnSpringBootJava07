@@ -25,6 +25,9 @@ Câu 4 :
 
 Câu 5 :
 
+![model](https://user-images.githubusercontent.com/72613060/159363574-4229adec-6c24-4e55-9edc-db7974c87171.png)
 ![anh7](https://user-images.githubusercontent.com/72613060/159363178-99b66122-d2a0-497a-842c-4bbd4ef7bdcb.png)
 ![anh8](https://user-images.githubusercontent.com/72613060/159363219-ea7827ac-d207-479c-9a97-075994340801.png)
 ![anh9](https://user-images.githubusercontent.com/72613060/159363224-fbb99370-11fb-4986-b2c3-6fc3166f3b09.png)
+![anh10](https://user-images.githubusercontent.com/72613060/159363591-1c1f89d6-b9c9-4328-961a-048694b65327.png)
+
