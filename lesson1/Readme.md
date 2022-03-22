@@ -31,7 +31,8 @@ Câu 7 : Ý nghĩa của @RequestMapping là gì? Nó có những tham số gì 
  example :  @RequestMapping(value = "/ex/foos", headers = "key=val", method = GET,produces = MediaType.APPLICATION_XML_VALUE)
  -------------------------------------------------------------------------------------------------------------------------------------------------------------
  Câu 8 : Ý nghĩa của @RequestResponse khi đặt trong hàm hứng request để làm gì?
- - @ResponseBody cho bộ điều khiển biết rằng đối tượng được trả về sẽ tự động được tuần tự hóa thành JSON và được chuyển trở lại đối tượng HttpResponse. --------------------------------------------------------------------------------------------------------------------------------------------------------------
+ - @ResponseBody cho bộ điều khiển biết rằng đối tượng được trả về sẽ tự động được tuần tự hóa thành JSON và được chuyển trở lại đối tượng HttpResponse
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------
 Câu 9: Hãy trả lời khi nào thì dùng @PathVariable và khi nào nên dùng @RequestParam
 - @RequestParam và @PathVariable annotation đều được sử dụng để trích xuất dữ liệu từ request URL nhưng thật ra chúng có một điểm khác biệt rất lớn về cách sử dụng 
 - @RequestParam được dùng để trích xuất dữ liệu từ request query và có 4 tham số hỗ trợ :
@@ -52,6 +53,7 @@ Câu 11 : @GetMapping khác gì so với @PostMapping?
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 Câu 12 : Trong các annotation @RequestMapping, @GetMapping, @PostMapping… có tham số produces = MediaType.XXXX ý nghĩa tham số này là gì?
 -Định dạng Content-Type
+--------------------
 -Match the value của Content-Type header giá trị bạn cần gửi cho ánh xạ phụ thuộc vào những gì ứng dụng khách đặt trong header.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 Câu 13 :
