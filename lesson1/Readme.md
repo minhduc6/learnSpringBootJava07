@@ -3,7 +3,7 @@ Trong quá trình tạo dự án Spring Boot chúng ta phải khai báo những 
 -GroupId là một thành phần XML trong tệp POM.XML của dự án Maven chỉ định id của nhóm dự án.
 -ArtifactId là một thành phần XML trong POM.XML của dự án Maven chỉ định id của dự án
 -Sự khác biệt chính giữa groupId và artifactId trong Maven là groupId chỉ định id của nhóm dự án trong khi artifactId chỉ định id của dự án. Tóm lại, những yếu tố này giúp tổ chức các dự án của tổ chức
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+-
 Câu 2 :
 Tại sao phải đảo ngược tên miền trong <groupId>vn.techmaster</groupId>?
 -Việc đảo ngược tên miền trong groupId giúp chúng ta nhóm các modul của dự án dễ dàng hơn.
