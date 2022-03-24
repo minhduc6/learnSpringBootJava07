@@ -3,6 +3,10 @@
 -![anh0](https://user-images.githubusercontent.com/72613060/160025567-77cbfcc9-f2bd-466f-9080-a8cd4231fab7.png)
 ![anh0,1](https://user-images.githubusercontent.com/72613060/160025572-cf50ad9b-86c0-4d47-9e4b-c33ff280be7f.png)
 
+-Request
+
+![anh17](https://user-images.githubusercontent.com/72613060/160025968-9934cc2b-9771-4009-8deb-571ebfeaaa39.png)
+
 
 - getListJob và getJobFindById:
 
