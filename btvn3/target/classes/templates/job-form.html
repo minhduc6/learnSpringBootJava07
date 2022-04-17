@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhà Tuyển Dụng</title>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+<div class="container" style="width: 600px; margin: 0 auto">
+    <div>
+        <h2>Công Việc | [[${pageTitle}]]</h2>
+    </div>
+    <form th:action="@{'/job/save/'+ ${employerID}}" method="POST" th:object="${job}">
+        <input type="hidden" th:field="*{id}" />
+        <div class="form-group">
+            <label>Title</label>
+            <input
+                    type="text"
+                    th:field="*{title}"
+                    class="form-control"
+                    id="title"
+            />
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <select th:field="*{address}">
+                <option th:value="'HN'" th:text="HANOI"></option>
+                <option th:value="'HCM'" th:text="HOCHIMINH"></option>
+                <option th:value="'DN'" th:text="DANANG"></option>
+                <option th:value="'HUE'" th:text="HUE"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input
+                    type="text"
+                    th:field="*{description}"
+                    class="form-control"
+                    id="manufacturer"
+            />
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary m-3" />
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Select Option Example 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<h2>Select Employer</h2>
+<div class="header-right col-6">
+    <select id="employerID" class="right">
+        <option value="">--------</option>
+        <option th:each="employer : ${employers}" th:value="'/job/employer?employerID='+${employer.getId()}" th:text="${employer.getName()}"></option>
+    </select>
+</div>
+</body>
+<script>
+    $(function(){
+        // bind change event to select
+        $('#employerID').on('change', function () {
+            var url = $(this).val(); // get selected value
+            if (url) { // require a URL
+                location.href = url; // redirect
+            }
+            return false;
+        });
+    });
+
+</script>
+</html>

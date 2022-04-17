@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<!--      <a href="/">Trang Chủ</a>-->
+<!--      <h1 th:text="${job.title}"></h1>-->
+<!--      <h1 th:text="${job.address}"></h1>-->
+<!--      <h1 th:text="${job.description}"></h1>-->
+<!--      <h1 th:text="${emailEmployer}"></h1>-->
+<!--      <a  th:href="@{'/applicant/add/' +${emailEmployer}}">-->
+<!--          <button type="button" class="btn btn-primary">Gửi CV</button>-->
+<!--      </a>-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email Employer</th>
+        <th scope="col"> Gửi CV</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th th:text="${job.title}"></th>
+        <td th:text="${job.address}"></td>
+        <td th:text="${job.description}"></td>
+        <td th:text="${emailEmployer}"></td>
+        <td>
+            <a  th:href="@{'/applicant/add/' +${emailEmployer}}">-->
+                         <button type="button" class="btn btn-primary">Gửi CV</button>-->
+            </a>
+        </td>
+                    </tr>
+    </tbody>
+</table>
+</body>
+</html>

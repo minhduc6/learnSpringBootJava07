@@ -1,19 +1,34 @@
 package vn.techmasterr.jobhunt.model;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Employer {
     private  String id;
     private  String name;
+    private String logo;
     private  String website;
     private  String email;
-    private  String address;
+    private Set<Job> listJob;
 
-    public Employer(String id, String name, String website, String email, String address) {
+    public Employer(String id, String name, String logo, String website, String email, Set<Job> listJob) {
         this.id = id;
         this.name = name;
+        this.logo = logo;
         this.website = website;
         this.email = email;
-        this.address = address;
+        this.listJob = listJob;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public Employer() {
@@ -43,6 +58,14 @@ public class Employer {
         this.website = website;
     }
 
+    public Set<Job> getListJob() {
+        return listJob;
+    }
+
+    public void setListJob(Set<Job> listJob) {
+        this.listJob = listJob;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -51,11 +74,5 @@ public class Employer {
         this.email = email;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Employer</title>
+</head>
+<body>
+<h1>Add new Employer</h1>
+<form action="#" th:action="@{/employer/add}" method="post" name="person" enctype="multipart/form-data"
+      th:object="${employer}">
+    Name : <input type="text" class="form-control"  autocomplete="off" th:field="*{name}"/><br><br>
+    Website : <input type="text" class="form-control"  autocomplete="off" th:field="*{website}"/><br><br>
+    Email : <input type="text" class="form-control"  autocomplete="off" th:field="*{email}"/><br><br>
+    Logo : <input type="file" class="form-control"th:field="*{logo_path}" /><br><br>
+    <button class="btn btn-primary mt-3" type="submit">Submit form</button>
+
+</form>
+</body>
+</html>

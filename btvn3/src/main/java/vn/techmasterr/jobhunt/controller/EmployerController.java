@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import vn.techmasterr.jobhunt.model.Employer;
-import vn.techmasterr.jobhunt.repository.EmployerRepository;
 import vn.techmasterr.jobhunt.service.EmployerService;
 
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 @Controller
