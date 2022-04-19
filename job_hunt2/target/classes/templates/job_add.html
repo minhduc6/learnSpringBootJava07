@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head th:replace="template.html :: header('Add new job')">
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/job">List job</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mt-5">
+        <form action="#" th:action="@{/job/add}" method="post" name="job" 
+          th:object="${job}">
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="name" autocomplete="off" th:field="*{title}" />
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</div>
+          </div>
+          <div class="form-group row mt-3">
+            <label for="name" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="description" autocomplete="off" th:field="*{description}" />
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Description Error</div>
+          </div>
+          <div class="form-group row mt-3">
+            <label for="name" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-4">
+              <select name="city" id="nationality">
+                <option 
+                th:each="city:${cities}" 
+                th:text="${city.label}" 
+                th:value="${city}">Hà nội</option>
+              </select>
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Description Error</div>
+          </div>
+          <input type="hidden" th:field="*{emp_id}" />
+          <button class="btn btn-primary mt-3" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
