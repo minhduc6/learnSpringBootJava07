@@ -1,33 +1,32 @@
-Model :
+Danh sách nhà tuyển dụng
 
-![1](https://user-images.githubusercontent.com/72613060/161464453-016eabb0-215e-478d-8362-8ee78e6a4d23.png)
+![1](https://user-images.githubusercontent.com/72613060/163715713-def7de69-eb2b-471c-ac8c-0408cf6d7b29.png)
 
-Service :
+Đổ nhà tuyển dụng ra combobox chọn listJob của từng nhà tuyển dụng :
 
-![2](https://user-images.githubusercontent.com/72613060/161464468-afcd4ad0-558d-48db-81a6-e1e442b0da3c.png)
-![3](https://user-images.githubusercontent.com/72613060/161464473-592fb791-d14e-4afd-9ed6-d6465af78993.png)
-![4](https://user-images.githubusercontent.com/72613060/161464482-75ec6226-d89d-4f76-80cb-8a3feed8e470.png)
-
-Controller :
-
-![4](https://user-images.githubusercontent.com/72613060/161464512-4604e875-9270-4f03-a3ee-d16d4bbd5098.png)
-![5](https://user-images.githubusercontent.com/72613060/161464529-c6bb9e23-d7bc-4c02-b9c8-3ff27ec10808.png)
-![6](https://user-images.githubusercontent.com/72613060/161464571-1d0a86b4-ae56-43c9-b914-7ca0ded80f20.png)
-![7](https://user-images.githubusercontent.com/72613060/161464586-26ec8686-be84-4988-9630-e3ec051fe078.png)
-
-Thymeleaf :
-
-![8](https://user-images.githubusercontent.com/72613060/161464635-00bc255d-f029-4af8-be40-ca22692377d6.png)
-
-![9](https://user-images.githubusercontent.com/72613060/161464639-c96aed91-6c5f-4d44-b52e-52f126519690.png)
-
-![10](https://user-images.githubusercontent.com/72613060/161464645-893e2147-c5e8-4829-9950-60edba425240.png)
-
-Result :
+![2](https://user-images.githubusercontent.com/72613060/163715728-1bab26d6-6a98-4bed-b7e8-9248fe85b844.png)
 
 
-![11](https://user-images.githubusercontent.com/72613060/161464661-750433e3-fa5d-417d-a66f-ab30f9f85e5f.png)
-![12](https://user-images.githubusercontent.com/72613060/161464668-261d175f-36f2-47a4-9ab5-3d52b25f59f6.png)
-![13](https://user-images.githubusercontent.com/72613060/161464671-d434c311-6af4-4ba6-8cfd-30ad5bfee64f.png)
+![3](https://user-images.githubusercontent.com/72613060/163715739-7c8e9fd8-68c2-43f5-98ab-7fb92763fb51.png)
 
+Add Job :
+
+![4](https://user-images.githubusercontent.com/72613060/163715743-5b7f43fb-0cb6-4bd4-93b8-8359fc999dad.png)
+
+Update Job :
+
+![5](https://user-images.githubusercontent.com/72613060/163715761-3462407f-ab4f-47cb-a6f7-d822143c0e15.png)
+Delete job:
+
+![6](https://user-images.githubusercontent.com/72613060/163715774-2968e845-7c81-4755-8533-75ee812a53ae.png)
+
+Detail Job :
+![7](https://user-images.githubusercontent.com/72613060/163715787-0fc4e28b-4cda-4a60-837f-324d42a729b9.png)
+
+Gửi CV :
+![8](https://user-images.githubusercontent.com/72613060/163715795-4b209da3-ae5b-4f36-9429-cad431f95a3f.png)
+
+![9](https://user-images.githubusercontent.com/72613060/163715805-d7264bdc-5b9b-477a-878e-b1ad49e78570.png)
+
+![10](https://user-images.githubusercontent.com/72613060/163715811-4237415d-d903-4ea8-962f-6f1cb42075cd.png)
 
