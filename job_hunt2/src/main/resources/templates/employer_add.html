@@ -7,7 +7,8 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="/employer">List Employers</a>
+      <a class="navbar-brand" href="/employer"> Employers</a>
+      <a class="navbar-brand" href="/job"> Employers</a>
     </div>
   </nav>
 
@@ -16,6 +17,7 @@
       <div class="col-lg-8 mt-5">
         <form action="#" th:action="@{/employer/add}" method="post" name="employer" enctype="multipart/form-data"
           th:object="${employer}">
+          <input type="hidden" th:field="*{id}" />
           <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-4">
@@ -41,9 +43,8 @@
           <div class="form-group row mt-3">
             <label for="email" class="col-sm-2 col-form-label">Select a Logo</label>
             <div class="col-sm-4">
-              <input type="file" class="form-control" th:field="*{logo}" />
+              <input type="file" name="image" accept="image/png, image/jpeg" />
             </div>
-            <div class="text-danger" th:if="${#fields.hasErrors('logo')}" th:errors="*{logo}">Upload Error</div>
           </div>
           <button class="btn btn-primary mt-3" type="submit">Save</button>
         </form>

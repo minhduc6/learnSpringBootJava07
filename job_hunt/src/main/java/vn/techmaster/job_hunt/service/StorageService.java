@@ -16,29 +16,19 @@ public class StorageService {
     @Value("${upload.path}")
     private String path;
 
-    // id của EmployerID
-    public void uploadFile(MultipartFile file,Employer employer) {
+    public void uploadFile(MultipartFile file) {
 
         if (file.isEmpty()) {
             throw new StorageException("Failed to store empty file");
         }
-        String extension = getFileExtension(file.getOriginalFilename());
-        String newFileName = path + employer.getId() + "." + extension;
-        employer.setLogo_path(employer.getId() + "." + extension);
+
+        String fileName = file.getOriginalFilename();
         try {
             var is = file.getInputStream();
-            Files.copy(is, Paths.get(newFileName), StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(is, Paths.get(path + fileName), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
-            var msg = String.format("Failed to store file %s", newFileName);
+            var msg = String.format("Failed to store file %s", fileName);
             throw new StorageException(msg, e);
-        }
-    }
-    private String getFileExtension(String filename){
-        int postOfDot = filename.lastIndexOf(".");
-        if(postOfDot >= 0){
-            return  filename.substring(filename.lastIndexOf(".") + 1);
-        }else{
-            return  null;
         }
     }
 }

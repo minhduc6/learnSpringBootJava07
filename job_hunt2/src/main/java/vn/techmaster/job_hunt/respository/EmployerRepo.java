@@ -33,11 +33,13 @@ public class EmployerRepo {
     return employers.get(id);
   }
 
-  //Cập nhật logo của Employer
-  public void updateLogo(String id, String logo_path) { 
-    var emp = employers.get(id);
-    emp.setLogo_path(logo_path);
-    employers.put(id, emp);
+
+  public Employer updateEmployer(Employer employerRequest, String id) {
+    Employer employerAfter = employers.get(id);
+    employerAfter.setName(employerRequest.getName());
+    employerAfter.setWebsite(employerRequest.getWebsite());
+    employerAfter.setEmail(employerRequest.getEmail());
+    return employerAfter;
   }
 
   public Employer deleteById(String id) {

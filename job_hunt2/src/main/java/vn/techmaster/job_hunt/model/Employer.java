@@ -16,4 +16,10 @@ public class Employer {
   private String logo_path;
   private String website;
   private String email;
+
+  public String getPhotosImagePath() {
+    if (logo_path == null || id == null) return null;
+
+    return "/employer-photos/" + id + "/" + logo_path;
+  }
 }

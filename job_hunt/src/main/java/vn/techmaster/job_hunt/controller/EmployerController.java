@@ -46,7 +46,7 @@ public class EmployerController {
                 employerRequest.getLogo_path().getOriginalFilename(),
                 employerRequest.getWebsite(),
                 employerRequest.getEmail());
-        storageService.uploadFile(employerRequest.getLogo_path(),newEmployer);
+        storageService.uploadFile(employerRequest.getLogo_path());
         employerRepo.add(newEmployer);
         return "redirect:/employer";
     }

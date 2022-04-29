@@ -7,18 +7,17 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import org.springframework.web.multipart.MultipartFile;
+import vn.techmaster.job_hunt.FileUploadUtil;
 import vn.techmaster.job_hunt.model.Employer;
 import vn.techmaster.job_hunt.request.EmployerRequest;
 import vn.techmaster.job_hunt.respository.EmployerRepo;
-import vn.techmaster.job_hunt.service.StorageService;
+
 
 @Controller
 @RequestMapping(value = "/employer")
@@ -26,8 +25,6 @@ public class EmployerController {
   @Autowired
   private EmployerRepo employerRepo;
 
-  @Autowired
-  private StorageService storageService;
 
   @GetMapping
   public String listAllEmployers(Model model) {
@@ -43,45 +40,50 @@ public class EmployerController {
 
   @GetMapping(value = "/add")
   public String addEmployerForm(Model model) {
-    model.addAttribute("employer", new EmployerRequest("", "", "", "", null));
+    model.addAttribute("employer", new EmployerRequest("", "", "", ""));
     return "employer_add";
   }
 
   @PostMapping(value = "/add", consumes = { "multipart/form-data" })
   public String addEmployer(@Valid @ModelAttribute("employer") EmployerRequest employerRequest,
-      BindingResult result,
-      Model model) {
-    if (employerRequest.logo().getOriginalFilename().isEmpty()) {
-      result.addError(new FieldError("employer", "logo", "Logo is required"));
-    }
-
-    // Nêú có lỗi thì trả về trình duyệt
-    if (result.hasErrors()) {
-      return "employer_add";
-    }
+                            @RequestParam("image") MultipartFile multipartFile, Model model) throws IOException {
+    String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 
     // Thêm vào cơ sở dữ liệu
-    Employer emp = employerRepo.add(Employer.builder()
-        .name(employerRequest.name())
-        .website(employerRequest.website())
-        .email(employerRequest.email())
-        .build());
-
-    // Lưu logo vào ổ cứng
-    try {
-      String logoFileName = storageService.saveFile(employerRequest.logo(), emp.getId());
-      employerRepo.updateLogo(emp.getId(), logoFileName);
-    } catch (IOException e) {
-      // Nếu lưu file bị lỗi thì hãy xoá bản ghi Employer
-      e.printStackTrace();
+    if(employerRequest.id().equals(""))
+    {
+      Employer emp = employerRepo.add(Employer.builder()
+              .name(employerRequest.name())
+              .website(employerRequest.website())
+              .email(employerRequest.email())
+              .logo_path(fileName)
+              .build());
+      String uploadDir = "employer-photos/" + emp.getId();
+      FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+    } else if(employerRequest.id() != ""){
+      Employer emp =  employerRepo.findById(employerRequest.id());
+      emp.setName(employerRequest.name());
+      emp.setWebsite(employerRequest.website());
+      emp.setEmail(employerRequest.email());
+      emp.setLogo_path(fileName);
+      String uploadDir = "employer-photos/" + emp.getId();
+      FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
     }
     return "redirect:/employer";
+  }
+
+  @GetMapping("/edit/{id}")
+  public String editCar(@PathVariable(name = "id") String id , Model model)
+  {
+    Employer employer = employerRepo.findById(id);
+    model.addAttribute("employer", employer);
+    model.addAttribute("pageTitle", "Edit Employer ID : " + id);
+    return "employer_add";
   }
 
 @GetMapping(value ="/delete/{id}")
 public String deleteEmployerByID(@PathVariable String id) {
   Employer emp = employerRepo.deleteById(id);
-  storageService.deleteFile(emp.getLogo_path());
   return "redirect:/employer";
 }
 

@@ -8,5 +8,27 @@
       <a class="navbar-brand" href="/">Home</a>
     </div>
   </nav>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">City</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job, iStat:${jobs}">
+      <th scope="row" th:text="${iStat.index} +1"></th>
+      <td><a th:text="${job.title}"></a></td>
+      <td><a th:text="${job.description}" target="_blank"></a></td>
+      <td><a th:text="${job.city}" target="_blank"></a></td>
+      <td><a th:href="|/job/edit/${job.id}|" >Edit</a>
+         <a th:href="|/job/delete/${job.id}|" >Delete</a>
+      </td>
+    </tr>
+    </tbody>
 </body>
 </html>

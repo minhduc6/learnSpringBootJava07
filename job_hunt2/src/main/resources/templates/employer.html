@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title th:text="${employer.name}"></title>
 </head>
 <body>
-  <h1 th:text="${employer.name}"></h1>
-  <img th:src="|/logo/${employer.logo_path}|" width="200"/>
-  <p>
-    <a  th:href="|/job/add?emp_id=${employer.id}|">Add new job</a><br><br>
-    <a th:href="|/employer/delete/${employer.id}|">Delete</a>
-  </p>
+  <div  class="card" style="width: 25rem;margin-left: 580px">
+    <img class="card-img-top" th:src="@{${employer.photosImagePath}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" th:text="${employer.name}"></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" th:text="${employer.website}"></li>
+      <li class="list-group-item" th:text="${employer.email}"></li>
+    </ul>
+    <div class="card-body">
+      <a  th:href="|/job/add?emp_id=${employer.id}|" class="card-link">Add job</a>
+    </div>
+    <div class="card-body">
+      <a  th:href="|/employer/edit/${employer.id}|">Edit</a>
+      <a  th:href="|/employer/delete/${employer.id}|">Delete</a>
+    </div>
+  </div>
   
 </body>
 </html>
