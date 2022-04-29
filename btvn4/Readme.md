@@ -16,7 +16,8 @@ View Employer
 ![4](https://user-images.githubusercontent.com/72613060/164016238-25e13f40-514c-4885-9c63-4d792e0d2cb6.png)
 
 Add job
-![4 1](https://user-images.githubusercontent.com/72613060/164016814-4c7b08f8-c2dc-46f1-a5d6-7470d41db759.png)
+
+![4 2](https://user-images.githubusercontent.com/72613060/164017505-ca42a289-b7c0-4efa-b7bf-cb915dcd9c44.png)
 
 List job
 ![5](https://user-images.githubusercontent.com/72613060/164016844-ac82ca0d-2597-472c-b692-a11c8cb82ace.png)
