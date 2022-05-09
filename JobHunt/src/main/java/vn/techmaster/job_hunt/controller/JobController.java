@@ -41,6 +41,7 @@ public class JobController {
     @GetMapping()
     public String pageJob(@RequestParam int page,Model model){
         JobReponse jobReponse = jobRepo.pageJob(page);
+        model.addAttribute("searchRequest",new SearchRequest());
         model.addAttribute("totalPage",jobReponse.getTotalPage());
         model.addAttribute("jobs", jobReponse.getJobs());
         model.addAttribute("employers", empRepo.getAllEmployerHashMap());
@@ -70,10 +71,20 @@ public class JobController {
         return "job_add";
     }
 
+//    @GetMapping(value = "/search")
+//    public String searchKeyword(@RequestParam(required = false) String keyword
+//            , @RequestParam(required = false) String city, Model model) {
+//        model.addAttribute("jobs", jobRepo.filterJob(keyword, city));
+//        model.addAttribute("employers", empRepo.getAllEmployerHashMap());
+//        model.addAttribute("totalApplicantMap", applicantRepo.countApplicantTotal());
+//        return "job_home";
+//    }
+
+
+
     @GetMapping(value = "/search")
-    public String searchKeyword(@RequestParam(required = false) String keyword
-            , @RequestParam(required = false) String city, Model model) {
-        model.addAttribute("jobs", jobRepo.filterJob(keyword, city));
+    public String searchKeyword(@RequestBody @ModelAttribute("searchRequest") SearchRequest searchRequest, Model model) {
+        model.addAttribute("jobs", jobRepo.filterJob(searchRequest));
         model.addAttribute("employers", empRepo.getAllEmployerHashMap());
         model.addAttribute("totalApplicantMap", applicantRepo.countApplicantTotal());
         return "job_home";

@@ -71,11 +71,19 @@ public class JobRepo {
     jobs.put(job.getId(), job);
   }
 
-  public Collection<Job> filterJob(String keyword, String city){
+//  public Collection<Job> filterJob(String keyword, String city){
+//    return  jobs.values().stream()
+//            .filter(job -> job.getTitle().toLowerCase()
+//                    .contains(keyword.toLowerCase())
+//            && job.getCity().toString().equals(city))
+//            .collect(Collectors.toList());
+//  }
+
+  public Collection<Job> filterJob(SearchRequest searchRequest){
     return  jobs.values().stream()
             .filter(job -> job.getTitle().toLowerCase()
-                    .contains(keyword.toLowerCase())
-            && job.getCity().toString().equals(city))
+                    .contains(searchRequest.getKeyword().toLowerCase())
+                    && job.getCity().toString().equals(searchRequest.getCity().toString()))
             .collect(Collectors.toList());
   }
 
