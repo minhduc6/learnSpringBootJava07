@@ -14,13 +14,13 @@
 
 <div class="row">
     <div class="col-lg-8 mt-5">
-        <form  th:action="@{/job/search}" method="get">
+        <form  th:action="@{/job/search}" method="get" th:object="${searchRequest}">
             <div class="form-group row mt-3">
                 <div class="col-sm-6">
-                    <input type="text" name="keyword" th:value="${keyword}" class="form-control" id="description" autocomplete="off" placeholder="Key job title" />
+                    <input type="text" name="keyword" th:value="*{keyword}" class="form-control" id="description" autocomplete="off" placeholder="Key job title" />
                 </div>
                 <div class="col-sm-4">
-                    <select  name="city">
+                    <select  name="city" th:field="*{city}">
                         <option  th:each="state : ${T(vn.techmaster.job_hunt.model.City).values()}" th:value="${state}"
                                 th:text="${state.label}">
                         </option>
@@ -50,11 +50,9 @@
     <tr th:each="job, iStat:${jobs}">
         <th scope="row" th:text="${iStat.index}+1"></th>
         <td><a th:href="|/job/${job.id}|" th:text="${job.title}">Title</a></td>
-        <td><a th:text="${employers.get(job.emp_id).name}">Employer Name</a></td>
+        <td><a th:text="${employers.get(job.getEmployer().getId()).name}">Employer Name</a></td>
         <td th:text="${job.city}">City</td>
         <td th:text="${job.description}">Description</td>
-<!--    <td th:if="${totalApplicantMap.get(job.id)} == null">0</td>-->
-<!--    <td th:text="${totalApplicantMap.get(job.id)}"></td>-->
         <td th:utext="${totalApplicantMap.get(job.id) == null} ?  0 : ${totalApplicantMap.get(job.id)}"></td>
     </tr>
     </tbody>
@@ -70,7 +68,6 @@
 </nav>
 <header th:replace="template.html :: footer"> </header>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     var totalPage = [[${totalPage}]]
     console.log(totalPage)
