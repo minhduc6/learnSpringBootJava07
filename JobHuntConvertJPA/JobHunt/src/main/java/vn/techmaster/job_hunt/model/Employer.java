@@ -34,7 +34,7 @@ public class Employer {
     this.email = email;
   }
 
-  @OneToMany(mappedBy = "employer", cascade = CascadeType.ALL, orphanRemoval = false)
+  @OneToMany(mappedBy = "employer",cascade = CascadeType.ALL)
   private List<Job> jobs = new ArrayList<>();
 
 

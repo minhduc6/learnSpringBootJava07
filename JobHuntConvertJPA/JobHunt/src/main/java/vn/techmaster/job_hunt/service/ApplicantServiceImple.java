@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import vn.techmaster.job_hunt.model.Applicant;
 import vn.techmaster.job_hunt.model.Job;
 import vn.techmaster.job_hunt.repository.ApplicantRepository;
+import vn.techmaster.job_hunt.repository.JobRepository;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,6 +15,9 @@ public class ApplicantServiceImple implements ApplicantService{
 
     @Autowired
     private ApplicantRepository applicantRepository;
+
+    @Autowired
+    private JobRepository jobRepository;
 
     @Override
     public Collection<Applicant> getAll() {
@@ -43,6 +47,7 @@ public class ApplicantServiceImple implements ApplicantService{
     @Override
     public Applicant deleteById(String id) {
         Optional<Applicant> applicant = applicantRepository.findById(id);
+        Job job = jobRepository.findById(applicant.get().getJob().getId()).get();
         applicantRepository.deleteById(id);
         return applicant.get();
     }

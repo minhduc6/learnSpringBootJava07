@@ -27,13 +27,9 @@ public class Applicant {
     Collection<Skill> skills;
 
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "job_id")
     private Job job;
 
-    @PreRemove
-    public void preRemove() {
-        job.remove(this);
-    }
      
 }

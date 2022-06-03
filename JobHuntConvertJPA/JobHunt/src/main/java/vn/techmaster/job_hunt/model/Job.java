@@ -44,24 +44,10 @@ public class Job {
     @JoinColumn(name = "employer_id")
     private Employer employer;
 
-    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = false)
+    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL)
     private List<Applicant> applicants = new ArrayList<>();
 
 
-    public void add(Applicant applicant) {
-        applicant.setJob(this);
-        applicants.add(applicant);
-    }
 
-    public void remove(Applicant applicant) {
-        applicant.setJob(null);
-        applicants.remove(applicant);
-    }
-
-    @PreRemove
-    public void preRemove() {
-        applicants.stream().forEach(p -> p.setJob(null));
-        applicants.clear();
-    }
 
 }
