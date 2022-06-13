@@ -84,7 +84,7 @@ public class Trade {
         long monneyAccountCurrent = account.getBalance();
 
         if(amount < 0){
-            throw new TradeException("Số tiền Nạp phải lớn 0");
+            throw new TradeException("Số Rút Nạp phải lớn 0");
         }
         account.setBalance(monneyAccountCurrent - amount);
         acountRepository.save(account);
