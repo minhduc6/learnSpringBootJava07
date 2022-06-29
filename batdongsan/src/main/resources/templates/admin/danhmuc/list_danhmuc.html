@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout_admin :: main-fragment(
+                                                ~{:: title},
+                                                ~{:: #css-resources},
+                                                ~{:: #js-resources},
+                                                ~{:: #main-content}
+                                               )}">
+
+<head>
+    <title>Dashboard</title>
+
+    <th:block id="css-resources">
+
+    </th:block>
+</head>
+<body>
+<th:block id="css-resources">
+
+</th:block>
+<div class="container-fluid">
+    <main id="main-content">
+        <div>
+            <h2>Manage Danh Mục</h2>
+            <a th:href="@{/admin/danhmuc/new}">Tạo Mới Danh Mục</a>
+        </div>
+
+        <div th:if="${message} != null" class="alert alert-success text-center">
+            [[${message}]]
+        </div>
+
+        <div>
+            <table class="
+            table table-bordered table-striped table-hover table-responsive-xl
+          ">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+
+                    <th>Tên Danh Mục</th>
+
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="dm : ${listDM}">
+                    <td>[[${dm.id}]]</td>
+                    <td>[[${dm.name}]]</td>
+                    <td><a class="fas fa-edit fa-2x icon-green" th:href="@{'/admin/danhmuc/edit/' + ${dm.id}}"
+                           title="Edit this Danh Mục"></a>
+                        &nbsp;
+                        <a class="fas fa-trash fa-2x icon-dark link-delete"
+                           th:href="@{'/admin/danhmuc/delete/' + ${dm.id}}"
+                           title="Delete this Danh Mục"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+        <div class="modal fade text-center" id="confirmModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Confirmation</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <span id="textConfirm"></span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-success" href="" id="yesButton">Yes</a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<th:block id="js-resources">
+
+</th:block>
+</body>
+</html>

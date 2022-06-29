@@ -22,7 +22,7 @@
 	<main id="main-content">
 		<div>
 			<h2>Manage Users</h2>
-			<a th:href="@{/users/new}">Create New User</a>
+			<a th:href="@{/admin/users/new}">Create New User</a>
 		</div>
 		<div th:if="${message} != null" class="alert alert-success text-center">
 			[[${message}]]
@@ -30,7 +30,7 @@
 
 		<div>
 
-			<form th:action="@{/users/page/1}" class="form-inline m-3">
+			<form th:action="@{/admin/users/page/1}" class="form-inline m-3">
 				<input type="hidden" name="sortField" th:value="${sortField}" />
 				<input type="hidden" name="sortDir" th:value="${sortDir}" />
 
@@ -39,9 +39,10 @@
 				<input type="search" name="keyword" th:value="${keyword}" class="form-control" required />
 				&nbsp; &nbsp;
 				<input type="submit" value="Search" class="btn btn-primary" />
-				&nbsp; &nbsp;
-				<input type="button" value="Clear" class="btn btn-secondary" onclick="clearFilter()" />
+				&nbsp;
 			</form>
+
+			<a class="form-inline m-3" th:href="@{/admin/users}"><button class="btn btn-primary"> Clear Filter </button></a>
 
 		</div>
 
@@ -82,15 +83,15 @@
 					<td>[[${user.roles}]]</td>
 					<td>
 						<a th:if="${user.enabled} == true" class="fas fa-check-circle fa-2x" style="color: green;"
-						   th:href="@{'/users/'+${user.id}+'/enabled/false'}" title="Disable this user"></a>
+						   th:href="@{'/admin/users/'+${user.id}+'/enabled/false'}" title="Disable this user"></a>
 						<a th:if="${user.enabled} == false" class="fas fa-circle fa-2x" style="color: gray;"
-						   th:href="@{'/users/'+ ${user.id} + '/enabled/true'}" title="Disable this user"></a>
+						   th:href="@{'/admin/users/'+ ${user.id} + '/enabled/true'}" title="Disable this user"></a>
 					</td>
-					<td><a class="fas fa-edit fa-2x icon-green" th:href="@{'/users/edit/' + ${user.id}}"
+					<td><a class="fas fa-edit fa-2x icon-green" th:href="@{'/admin/users/edit/' + ${user.id}}"
 						   title="Edit this user"></a>
 						&nbsp;
 						<a class="fas fa-trash fa-2x icon-dark link-delete"
-						   th:href="@{'/users/delete/' + ${user.id}}" th:userId="${user.id}"
+						   th:href="@{'/admin/users/delete/' + ${user.id}}" th:userId="${user.id}"
 						   title="Delete this user"></a>
 					</td>
 				</tr>
@@ -128,28 +129,6 @@
 				</ul>
 			</nav>
 		</div>
-
-		<div class="modal fade text-center" id="confirmModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">Delete Confirmation</h4>
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-
-					<div class="modal-body">
-						<span id="textConfirm"></span>
-					</div>
-
-					<div class="modal-footer">
-						<a class="btn btn-success" href="" id="yesButton">Yes</a>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
 	</main>
 	</div>
 <th:block id="js-resources">
@@ -158,6 +137,7 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		$(".link-delete").on("click", function (e) {
+			alert("clickkk")
 			e.preventDefault();
 			link = $(this);
 			// alert($(this).attr("href"));
@@ -167,12 +147,6 @@
 			$("#confirmModal").modal();
 		});
 	});
-
-
-	function clearFilter() {
-		window.location = "[[@{/users}]]";
-	}
-
 </script>
 </body>
 </html>

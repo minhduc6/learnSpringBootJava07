@@ -1,230 +1,47 @@
-//Demo
-let product = [
-  {
-    id: 1,
-    houseName: "Căn Hộ Ven Biển",
-    square: 45,
-    bedRom: 1,
-    price: 3.5,
-    region: 2,
-    type: 1,
-  },
-  {
-    id: 2,
-    houseName: "Chung Cư Cao Cấp Quận 9",
-    square: 30,
-    bedRom: 2,
-    price: 4.5,
-    region: 3,
-    type: 2,
-  },
-  {
-    id: 3,
-    houseName: "The Sang Residence Đà Nẵng",
-    square: 62,
-    bedRom: 1,
-    price: 6.5,
-    region: 2,
-    type: 2,
-  },
-  {
-    id: 4,
-    houseName: "Sun 69 Thụy Khuê",
-    square: 152,
-    bedRom: 3,
-    price: 18.1,
-    region: 1,
-    type: 3,
-  },
-  {
-    id: 5,
-    houseName: "Vinhome Ocean Park",
-    square: 70,
-    bedRom: 3,
-    price: 11.5,
-    region: 1,
-    type: 3,
-  },
-  {
-    id: 6,
-    houseName: "Căn Hộ Mặt Tiền Đường Tên Lửa",
-    square: 53,
-    bedRom: 2,
-    price: 2.4,
-    region: 3,
-    type: 1,
-  },
-];
-// Slick slide partner mobile
-$(".partner__list--mobile").slick({
-  dots: false,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  slidesToShow: 2,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 1500,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 1500,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 1500,
-      },
-    },
-  ],
+var citis = document.getElementById("city");
+var districts = document.getElementById("district");
+var wards = document.getElementById("ward");
+var Parameter = {
+  url: "/data/data.json", //Đường dẫn đến file chứa dữ liệu hoặc api do backend cung cấp
+  method: "GET", //do backend cung cấp
+  responseType: "application/json", //kiểu Dữ liệu trả về do backend cung cấp
+};
+//gọi ajax = axios => nó trả về cho chúng ta là một promise
+var promise = axios(Parameter);
+//Xử lý khi request thành công
+promise.then(function (result) {
+  renderCity(result.data);
 });
-//----------------------
-// about onclick
-$(".about--desktop__content__wrap").click(function () {
-  window.location.href = "about.html";
-});
-// Render index mobile
-let renderProduct = (pd) => {
-  for (let i = 0; i < 6; i++) {
-    let deskIndex = `<div class="product--desktop__item">
-                <img
-                  src="assest/product/${pd[i].id}/1.jpg"
-                  alt=""
-                  class="product--desktop__item__img"
-                />
-                <a href="productitem.html?productId=${pd[i].id}" class="product--desktop_item_link"
-                  ><div
-                    class="
-                      product--desktop__item__content
-                      product--desktop__item__content__scaleX
-                    "
-                  >
-                    <div class="product--desktop__item__content__header">
-                      Mở bán ${pd[i].houseName}
-                    </div>
-                    <div
-                      class="content-font"
-                      style="margin-top: 5px !important"
-                    >
-                      Diện tích: ${pd[i].square} m2 - ${pd[i].bedRom} Phòng Ngủ
-                    </div>
-                  </div></a
-                >
-              </div>`;
-    let mobileIndex = `<div class="col-12">
-              <div class="product--mobile__item">
-                <img
-                  src="assest/product/${pd[i].id}/1.jpg"
-                  alt=""
-                  class="product--mobile__item__img"
-                />
-                <a
-                  href="productitem.html?productId=${pd[i].id}"
-                  class="product--mobile_item_link"
-                  ><div
-                    class="
-                      product--mobile__item__content
-                      product--mobile__item__content__scaleX
-                    "
-                  >
-                    <div class="product--mobile__item__content__header">
-                      Mở bán ${pd[i].houseName}
-                    </div>
-                    <div
-                      class="content-font"
-                      style="margin-top: 5px !important"
-                    >
-                      Diện tích: ${pd[i].square} m2 - ${pd[i].bedRom} Phòng Ngủ
-                    </div>
-                  </div></a
-                >
-              </div>
-            </div>`;
-    let indexProductDesk = $("#product_data--desktop");
-    let indexMobileDesk = $("#index__product--mobile");
-    indexProductDesk.append(deskIndex);
-    indexMobileDesk.append(mobileIndex);
-  }
-};
-renderProduct(product);
-// valied form
-const validateEmail = (email) => {
-  const reEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  return reEmail.test(email);
-};
-const validateName = (nameForm) => {
-  let reName =
-    /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
-  return reName.test(nameForm);
-};
-const validatePhone = (phoneForm) => {
-  let rePhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
-  return rePhone.test(phoneForm);
-};
-let isvalid;
-let isvalidName;
-let isvalidPhone;
-const checkValidEmail = () => {
-  const e = document.getElementById("validationEmail").value;
-  if (validateEmail(e) == false) {
-    document.getElementById("em-feedback").style.display = "block";
-    isvalid = false;
-  } else {
-    document.getElementById("em-feedback").style.display = "none";
-    isvalid = true;
-  }
-  return isvalid;
-};
-const checkValidName = () => {
-  const n = document.getElementById("validationName").value;
-  if (validateName(n) == false) {
-    document.getElementById("name-feedback").style.display = "block";
-    isvalidName = false;
-  } else {
-    document.getElementById("name-feedback").style.display = "none";
-    isvalidName = true;
-  }
-  return isvalidName;
-};
-const checkValidPhone = () => {
-  const phone = document.getElementById("validationPhoneNumber").value;
-  if (validatePhone(phone) == false) {
-    document.getElementById("phone-feedback").style.display = "block";
-    isvalidPhone = false;
-  } else {
-    document.getElementById("phone-feedback").style.display = "none";
-    isvalidPhone = true;
-  }
-  return isvalidPhone;
-};
 
-$("#submit").click(function () {
-  if (
-    checkValidEmail() == true &&
-    checkValidName() == true &&
-    checkValidPhone() == true
-  ) {
-    alert("Chúng tôi đã nhận được tin nhắn của bạn");
-    console.log(checkValidEmail());
-    console.log(checkValidName());
-    console.log(checkValidPhone());
-  } else {
-    alert("Sai thông tin xin mời điền lại form");
-    console.log(checkValidEmail());
-    console.log(checkValidName());
-    console.log(checkValidPhone());
+function renderCity(data) {
+  for (const x of data) {
+    citis.options[citis.options.length] = new Option(x.Name, x.Id);
   }
-});
+
+  // xứ lý khi thay đổi tỉnh thành thì sẽ hiển thị ra quận huyện thuộc tỉnh thành đó
+  citis.onchange = function () {
+    district.length = 1;
+    ward.length = 1;
+    if(this.value != ""){
+      const result = data.filter(n => n.Id === this.value);
+
+      for (const k of result[0].Districts) {
+        district.options[district.options.length] = new Option(k.Name, k.Id);
+      }
+    }
+  };
+
+  // xứ lý khi thay đổi quận huyện thì sẽ hiển thị ra phường xã thuộc quận huyện đó
+  district.onchange = function () {
+    ward.length = 1;
+    const dataCity = data.filter((n) => n.Id === citis.value);
+    if (this.value != "") {
+      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+      for (const w of dataWards) {
+        wards.options[wards.options.length] = new Option(w.Name, w.Id);
+      }
+    }
+  };
+}
+

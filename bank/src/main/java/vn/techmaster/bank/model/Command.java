@@ -20,6 +20,7 @@ public class Command {
 
     private LocalDateTime startAt;
     private LocalDateTime finishAt;
+
     private  CommandStatus commandStatus;
 
     public Command(User requester) {

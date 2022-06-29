@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" th:fragment="main-fragment(title, cssResources, jsResources, mainContent)">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      th:fragment="main-fragment(title, cssResources, jsResources, mainContent)">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +28,10 @@
     </head>
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
         <div class="wrapper">
+
+            <form th:action="@{/logout}" method="post" th:hidden="true" name="logoutForm">
+                <input type="submit" />
+            </form>
             <!-- Navbar -->
             <nav class="main-header navbar navbar-expand navbar-white navbar-light">
                 <!-- Left navbar links -->
@@ -44,18 +49,12 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
                             <a href="/tai-khoan" class="dropdown-item">
-                                <div class="media">
-                                    Trang chủ
+                                <div style="text-align: center">
+                                    <a th:href="@{/account}" sec:authentication = "principal.fullname"></a>
                                 </div>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="/tai-khoan" class="dropdown-item">
-                                <div class="media">
-                                    Cập nhật profile
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="/api/logout" class="dropdown-item">
+                            <a href="" id="logoutLink" class="dropdown-item">
                                 <div class="media">
                                     Đăng xuất
                                 </div>
@@ -86,31 +85,23 @@
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a th:href="@{/admin/danhmuc}" class="nav-link">
                                     <i class="nav-icon fas fa-shopping-cart"></i>
                                     <p>
                                         Quản lý Danh Mục
                                         <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Quản Lý Loại Nhà Đất Bán</p>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Quản Lý Loại Nhà Đất  Thuê</p>
-                                        </a>
-                                    </li>
-
-                                </ul>
                             </li>
 
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class='nav-icon fab fa-centos'></i>
+                                    <p>
+                                        Quản lý các Loại Nhà Đất
+                                    </p>
+                                </a>
+                            </li>
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class='nav-icon fab fa-centos'></i>
@@ -151,7 +142,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="/admin/users" class="nav-link">
+                                <a th:href="@{/admin/users}"class="nav-link">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
                                         Quản lý user
@@ -189,7 +180,6 @@
                 </section>
             </div>
         </div>
-
         <!-- jQuery -->
         <script type="text/javascript" th:src="@{/vendor/jquery/jquery-3.4.1.min.js}"></script>
         <!-- Bootstrap -->
@@ -202,6 +192,16 @@
         <script type="text/javascript" th:src="@{/vendor/toastr/toastr.min.js}"></script>
         <!-- Select2 -->
         <script th:src="@{/adminlte/plugins/select2/js/select2.full.min.js}"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#logoutLink").on("click",function(e)
+                {
+                    e.preventDefault();
+                    document.logoutForm.submit();
+                });
+            });
+        </script>
         <!-- Common JS-->
         <th:block th:replace="${jsResources} ?: ~{}"></th:block>
     </body>
