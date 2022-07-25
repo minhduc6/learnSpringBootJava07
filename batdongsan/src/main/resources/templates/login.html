@@ -7,6 +7,12 @@
 	<title>Login - Shopme Admin</title>
 	
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+	<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+	/>
 </head>
 <body>
 <div class="container-fluid text-center">
@@ -34,15 +40,20 @@
 			<p>
 				<input type="checkbox" name="remember-me" />&nbsp;Remember Me
 			</p>
+			<!-- Trigger the modal with a button -->
+		   <p><a th:href="@{/account/quen-mat-khau}">Quên Mật Khẩu</a></p>
+			<p><a th:href="@{/register}">Đăng Ký</a></p>
 			<p>
 				<input type="submit" value="Login" class="btn btn-primary" />
-			</p>			
+			</p>
 		</div>
 	</form>
 	
 	<div>
 		<p>Forum Bất Động Sản - Copyright &copy; Forum</p>
 	</div>
+
+
 	
 </div>
 </body>

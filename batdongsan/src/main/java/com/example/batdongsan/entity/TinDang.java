@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
 
 
@@ -18,19 +20,19 @@ public class TinDang {
     @Id
     private int id;
 
-    private  String title;
+    private String title;
 
-    private  String thanhPho;
+    private String thanhPho;
 
     private String quanHuyen;
 
-    private  String phuong;
+    private String phuong;
 
     private String diaChi;
 
     private double dienTich;
 
-    @Column(name = "mo_ta" ,columnDefinition="LONGTEXT")
+    @Column(name = "mo_ta", columnDefinition = "LONGTEXT")
     private String moTa;
 
     private LocalDateTime startAt;
@@ -43,7 +45,7 @@ public class TinDang {
 
     private String sdt;
 
-    private  TinDangStatus tinDangStatus;
+    private TinDangStatus tinDangStatus;
 
     @Column(name = "main_photo")
     private String mainPhoto;
@@ -56,10 +58,6 @@ public class TinDang {
 
     @Column(name = "photo_3")
     private String photo3;
-
-
-
-
 
 
 }

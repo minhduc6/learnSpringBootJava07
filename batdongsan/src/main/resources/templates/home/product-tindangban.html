@@ -9,7 +9,7 @@
       href="assest/logobackground/logo/logonhadatFix.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/style-index1.css}"/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -39,7 +39,7 @@
           <div class="container--desktop wrap__header">
             <div class="logo">
               <div class="logo__text">
-                <a href="index.html"
+                <a th:href="@{/trang-chu}"
                   ><div class="logo__branch">Greenland</div></a
                 >
                 <div class="logo__slogan">Nơi hạnh phúc ngập tràn</div>
@@ -48,29 +48,22 @@
             <nav class="wrap__nav">
               <ul class="nav__menu">
                 <li class="nav__menu__items">
-                  <a href="about.html" class="nav__menu__item__link"
-                    >Giới Thiệu</a
+                  <a th:href="@{/trang-chu/about}" class="nav__menu__item__link"
+                  >Giới Thiệu</a
                   >
                 </li>
                 <li class="nav__menu__items">
-                  <a
-                    href="product-tindangban.html"
-                    class="nav__menu__item__link nav__menu__item__link__active"
-                    >Nhà Bán</a
+                  <a th:href="@{/trang-chu/tindangban}" class="nav__menu__item__link"
+                  >Nhà Bán</a
                   >
                 </li>
                 <li class="nav__menu__items">
-                  <a href="news.html" class="nav__menu__item__link">Tin Tức</a>
+                  <a th:href="@{/trang-chu/tindangthue}" class="nav__menu__item__link"
+                  >Nhà Cho Thuê</a
+                  >
                 </li>
                 <li class="nav__menu__items">
-                  <a href="contact.html" class="nav__menu__item__link"
-                    >Liên Hệ</a
-                  >
-                </li>
-                <li class="nav__menu__hotline">
-                  <a href="" class="nav__menu__item__hotline"
-                    >Hotline : <strong>0374889957</strong></a
-                  >
+                  <a  th:href="@{/trang-chu/tintuc}" class="nav__menu__item__link">Tin Tức</a>
                 </li>
               </ul>
             </nav>
@@ -117,6 +110,10 @@
                 </a>
               </div>
             </div>
+            <th:block th:if="${khongCoTinDang == 'empty'}">
+              <h2 style="text-align: center">Không tồn tại tin đăng nào</h2>
+            </th:block>
+            <th:block th:if="${khongCoTinDang != 'empty'}">
               <div style="text-align: center">
                 <a style="color: #EEBC1D" th:if="${currentPage>1}" th:href="@{'/trang-chu/tindangban/1'}">First</a>
                 <span style="color: #EEBC1D" th:unless="${currentPage>1}">First</span>
@@ -135,6 +132,7 @@
                 <span th:unless="${currentPage < totalPages}">Last</span>
 
               </div>
+            </th:block>
             </div>
           <div class="col-4">
             <div class="product__filter d-flex flex-column">

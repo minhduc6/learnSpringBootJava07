@@ -23,9 +23,8 @@
 <div class="container-fluid">
     <main id="main-content">
         <div class="main__link__nav">
-            <a href="index.html" class="page-nav-link">Trang chủ</a> >
-            <a href="product.html" class="page-nav-link">Nhà Bán</a> >
-            <a href="productitem.html" class="page-nav-link page-nav-link__active"
+            <a th:href="@{/admin/tindangban}" class="page-nav-link">Nhà Bán</a> >
+            <a href="#" class="page-nav-link page-nav-link__active"
             >[[${tindangban.title}]]</a
             >
         </div>
@@ -42,16 +41,16 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" th:src="@{${tindangban.getPhotosMainPath}}" alt="First slide">
+                            <img style="object-fit: cover" class="d-block w-100" th:src="@{${tindangban.getPhotosMainPath}}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" th:src="@{${tindangban.getPhoto1Path}}" alt="Second slide">
+                            <img  style="object-fit: cover" class="d-block w-100" th:src="@{${tindangban.getPhoto1Path}}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" th:src="@{${tindangban.getPhoto2Path}}" alt="Third slide">
+                            <img style="object-fit: cover" class="d-block w-100" th:src="@{${tindangban.getPhoto2Path}}" alt="Third slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" th:src="@{${tindangban.getPhoto3Path}}" alt="Third slide">
+                            <img style="object-fit: cover" class="d-block w-100" th:src="@{${tindangban.getPhoto3Path}}" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -66,21 +65,48 @@
                 <div class="product__item__detail">
                     <div class="product__item__detail__price">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-2">
                                 <div class="content-font">Mức giá :</div>
                                 <div class="content-header">[[${tindangban.giaBan}]] Tỷ</div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <div class="content-font">Diện tích :</div>
                                 <div class="content-header">[[${tindangban.dienTich}]] m2</div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <div class="content-font">Phòng ngủ</div>
                                 <div class="content-header">[[${tindangban.soPhongNgu}]] </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-2">
                                 <div class="content-font">Phòng Toilet</div>
                                 <div class="content-header">[[${tindangban.soPhongToilet}]] </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="content-font">Số điện thoại liện hệ</div>
+                                <div class="content-header">[[${tindangban.sdt}]]</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="content-font">Mặt Tiền:</div>
+                                <div class="content-header">[[${tindangban.matTien}]] m</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="content-font">Đường Vào :</div>
+                                <div class="content-header">[[${tindangban.duongVao}]] m</div>
+                            </div>
+                            <div class="col-2">
+                                <div class="content-font">Số Tầng </div>
+                                <div class="content-header">[[${tindangban.soTang}]] </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="content-font">Pháp Lý</div>
+                                <div class="content-header">[[${tindangban.phapLy}]] </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="content-font">Nội Thất</div>
+                                <div class="content-header">[[${tindangban.noiThat}]] </div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +116,7 @@
                         <p class="content-header">Thông tin mô tả</p>
                         <div th:utext="${tindangban.moTa}"></div>
                     </div>
-                    Bản Đồ
+
                     <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.215487994048!2d109.19552451533976!3d12.233683733948103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170676df3d13491%3A0xa372058e222a1b89!2zVHLhuqduIFBow7osIFRwLiBOaGEgVHJhbmcsIEtow6FuaCBIw7JhLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1627311523310!5m2!1svi!2s"
                             width="100%"

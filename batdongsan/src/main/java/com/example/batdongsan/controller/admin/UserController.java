@@ -122,9 +122,12 @@ public class UserController {
 			userService.delete(id);
 			redirectAttributes.addFlashAttribute("message", "The User ID  " + id + " has been deleted successfully");
 
-		} catch (NotFoundException e) {
+		} catch (NotFoundException  e) {
 			// TODO: handle exception
 			redirectAttributes.addFlashAttribute("message", e.getMessage());
+		}
+		catch (RuntimeException ex){
+			redirectAttributes.addFlashAttribute("message", "Không thể xoá vì User có tồn tại bài viết");
 		}
 		return "redirect:/admin/users";
 	}

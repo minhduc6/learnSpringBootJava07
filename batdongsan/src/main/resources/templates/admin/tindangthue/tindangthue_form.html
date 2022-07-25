@@ -18,8 +18,7 @@
         <div class="row">
             <div class="col-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/products">Danh sách sản phẩm</a></li>
+                    <li class="breadcrumb-item"><a th:href="@{/admin/tindangthue}">Danh sách tin đăng thuê</a></li>
                     <li class="breadcrumb-item active">Thêm sản phẩm mới</li>
                 </ol>
             </div>
@@ -35,7 +34,7 @@
         </div>
 
         <!-- Main content -->
-        <form method="POST" th:action="@{/admin/tindangthue/save}" th:object="${tindangthueRequest}" enctype="multipart/form-data">
+        <form method="POST" th:action="@{/admin/tindangthue/save}" onsubmit="return validatePhoneNumber()" th:object="${tindangthueRequest}" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-12">
                     <div class="card card-outline">
@@ -46,6 +45,8 @@
                                     <input type="hidden" id= "inputThanhPho" th:field="*{thanhPho}" />
                                     <input type="hidden"  id= "inputQuanHuyen" th:field="*{quanHuyen}" />
                                     <input type="hidden" id= "inputPhuong" th:field="*{phuong}" />
+                                    <input type="hidden" id="inputSoNgayDang" th:field="*{soNgayDang}"/>
+                                    <input type="hidden" id="inputChiPhi" th:field="*{chiPhi}"/>
                                     <input type="hidden"  th:field="*{startAt}" />
                                     <input type="hidden"  th:field="*{mainPhoto}" />
                                     <input type="hidden"  th:field="*{photo1}" />
@@ -127,37 +128,37 @@
                                             <label class="required-label" for="price">Giá bán (Tỷ Đồng)</label>
                                             <span class="invalid-feedback" id="invalid-feedback-price">Khoảng giá sản phẩm: 0-100 tỷ</span>
                                         </div>
-                                        <input th:field="*{giaBan}" type="text" class="form-control text-price-input" id="price">
+                                        <input th:field="*{giaBan}" min="0"   step="0.1" type="number" required class="form-control text-price-input" id="price">
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label  class="required-label" for="price">Diện Tích</label>
                                         </div>
-                                        <input th:field="*{dienTich}" type="text" class="form-control text-price-input" id="dientich">
+                                        <input th:field="*{dienTich}" step="0.1" min="0" type="number" required class="form-control text-price-input" id="dientich">
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Số Phòng Ngủ</label>
                                         </div>
-                                        <input th:field="*{soPhongNgu}"  type="text" class="form-control text-price-input" id="soPhongngu">
+                                        <input th:field="*{soPhongNgu}"  type="number" min="0" class="form-control text-price-input" id="soPhongngu">
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Số Phòng Toilet</label>
                                         </div>
-                                        <input  th:field="*{soPhongToilet}" type="text" class="form-control text-price-input" id="soPhongToilet">
+                                        <input  th:field="*{soPhongToilet}" type="number" min="0" class="form-control text-price-input" id="soPhongToilet">
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Số Tầng</label>
                                         </div>
-                                        <input th:field="*{soTang}"  type="text" class="form-control text-price-input" id="soTang">
+                                        <input th:field="*{soTang}" type="number" min="0" class="form-control text-price-input" id="soTang">
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Nội Thất</label>
                                         </div>
-                                        <input  th:field="*{noiThat}"  type="text" class="form-control text-price-input" id="noiThat">
+                                        <input  th:field="*{noiThat}"  type="text" minlength="0" class="form-control text-price-input" id="noiThat">
                                     </div>
                                     <div class="form-group">
                                         <div>
@@ -165,30 +166,32 @@
                                         </div>
                                         <input  th:field="*{sdt}"  type="text" class="form-control text-price-input" id="sdt">
                                     </div>
+                                    <th:block  th:if="${editTitle != 'Edit'}">
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Số Ngày Đăng</label>
                                         </div>
-                                        <select th:field="*{soNgayDang}" id="soNgayChon" class="form-control">
-                                            <option th:value="0">0</option>
-                                            <option th:value="1">1</option>
-                                            <option th:value="2">2</option>
-                                            <option th:value="3">3</option>
-                                            <option th:value="4">4</option>
-                                            <option th:value="5">5</option>
-                                            <option th:value="6">6</option>
-                                            <option th:value="7">7</option>
-                                            <option th:value="8">8</option>
-                                            <option th:value="9">9</option>
-                                            <option th:value="10">10</option>
+                                        <select  id="soNgayChon" class="form-control">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <div>
                                             <label class="required-label" for="price">Chi Phí Trả Cho Bản Tin</label>
                                         </div>
-                                        <input id="chiPhi" th:field="*{chiPhi}"  type="number" class="form-control text-price-input" >
+                                        <input id="chiPhi"   type="number" class="form-control text-price-input" >
                                     </div>
+                                    </th:block>
                                 </div>
                             </div>
                             <div class="row" >
@@ -231,7 +234,7 @@
             crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script th:src="@{/js/index.js}"></script>
+    <script th:src="@{/js/home.js}"></script>
     <script th:inline="javascript">
         $(document).ready(function() {
             $('#summernote').summernote({
@@ -284,8 +287,16 @@
         });
 
         $("#soNgayChon").change(function() {
-            $("#chiPhi").val($("#soNgayChon option:selected").text() * 5000);
+            $("#chiPhi").val($("#soNgayChon option:selected").text() * 0);
         });
+
+        $("#soNgayChon").change(function () {
+            $("#inputSoNgayDang").val($("#soNgayChon option:selected").text());
+            $("#inputChiPhi").val($("#soNgayChon option:selected").text() * 0);
+        });
+
+
+
 
 
         $("#district").change(function() {
@@ -409,6 +420,20 @@
             };
 
             reader.readAsDataURL(file);
+        }
+
+        function validatePhoneNumber() {
+            var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            var mobile = $('#sdt').val();
+            if (mobile !== '') {
+                if (vnf_regex.test(mobile) == false) {
+                    alert('Số điện thoại của bạn không đúng định dạng!');
+                    return false;
+                } else {
+                    alert('Số điện thoại của bạn hợp lệ!');
+                    return true;
+                }
+            }
         }
 
 

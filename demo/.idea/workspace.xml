@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2075a055-71f0-443c-adeb-138becc61e49" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/dangtin/tinbanpublic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JobHuntConvertJPA/JobHunt/src/main/resources/templates/job_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JobHuntConvertJPA/JobHunt/src/main/resources/templates/job_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JobHuntConvertJPA/JobHunt/target/classes/templates/job_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JobHuntConvertJPA/JobHunt/target/classes/templates/job_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/TinDangBanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/TinDangBanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/TinDangThueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/controller/admin/TinDangThueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/entity/TinDang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/entity/TinDang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/entity/TinDangBan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/entity/TinDangBan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/exception/HandleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/exception/InternalServerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/repository/TinDangBanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/repository/TinDangBanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/repository/TinDangThueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/repository/TinDangThueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/request/TimKiemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/request/TimKiemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/service/TimKiemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/java/com/example/batdongsan/service/TimKiemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/adminlte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/adminlte.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/adminlte.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/adminlte.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.components.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.components.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.components.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.components.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.core.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.core.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.core.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.extra-components.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.extra-components.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.extra-components.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.extra-components.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.pages.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.pages.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.pages.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.pages.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.plugins.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.plugins.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.plugins.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/alt/adminlte.plugins.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/brand.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/list_image_product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/modal_img.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/css/order.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/adminlte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/adminlte.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/adminlte.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/adminlte.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/modal_img.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/dist/js/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/chart.js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/css/autoFill.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/css/autoFill.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/js/autoFill.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/js/autoFill.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/js/dataTables.autoFill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-autofill/js/dataTables.autoFill.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.colVis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.flash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.flash.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.print.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/buttons.print.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/dataTables.buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/css/colReorder.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/css/colReorder.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/js/colReorder.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/js/colReorder.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/js/dataTables.colReorder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-colreorder/js/dataTables.colReorder.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/css/fixedColumns.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/css/fixedColumns.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/js/dataTables.fixedColumns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/js/dataTables.fixedColumns.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/js/fixedColumns.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedcolumns/js/fixedColumns.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/css/fixedHeader.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/js/dataTables.fixedHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/js/fixedHeader.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-fixedheader/js/fixedHeader.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/css/keyTable.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/css/keyTable.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/js/dataTables.keyTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/js/dataTables.keyTable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/js/keyTable.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-keytable/js/keyTable.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/js/dataTables.responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/css/rowGroup.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/css/rowGroup.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/js/dataTables.rowGroup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/js/dataTables.rowGroup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/js/rowGroup.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowgroup/js/rowGroup.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/css/rowReorder.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/css/rowReorder.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/js/dataTables.rowReorder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/js/dataTables.rowReorder.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/js/rowReorder.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-rowreorder/js/rowReorder.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/css/scroller.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/css/scroller.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/js/dataTables.scroller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/js/dataTables.scroller.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/js/scroller.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-scroller/js/scroller.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/css/select.bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/css/select.bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/js/dataTables.select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/js/dataTables.select.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/js/select.bootstrap4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables-select/js/select.bootstrap4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/datatables/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/drp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/amd/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/amd/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/amd/require.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/browserify/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/browserify/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/css/style-index1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/browserify/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/example/browserify/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/package.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/website.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/website/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/website/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/daterangepicker/website/website.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/brands.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/svg-with-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/svg-with-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/v4-shims.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/fontawesome-free/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/icheck-bootstrap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/bindings/inputmask.binding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/bindings/inputmask.binding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/dependencyLibs/inputmask.dependencyLib.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/global/window.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/inputmask.date.extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/inputmask.extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/inputmask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/inputmask.numeric.extensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/inputmask/jquery.inputmask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/jquery.inputmask.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/jquery.inputmask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/jquery.inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/bindings/inputmask.binding.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/dependencyLibs/inputmask.dependencyLib.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/global/window.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/inputmask.date.extensions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/inputmask.extensions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/inputmask.numeric.extensions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/inputmask/jquery.inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/inputmask/min/jquery.inputmask.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/list/list.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/js/OverlayScrollbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/js/OverlayScrollbars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/css/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/css/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/build.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/dsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/hsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/hy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/tk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/select2/js/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/font/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ar-AR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ar-AR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ar-AR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-az-AZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-az-AZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-az-AZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-bg-BG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-bg-BG.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-bg-BG.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ca-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ca-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ca-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-cs-CZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-cs-CZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-cs-CZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-da-DK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-da-DK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-da-DK.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-de-DE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-de-DE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-de-DE.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-el-GR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-el-GR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-el-GR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-EU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-EU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-es-EU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fa-IR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fa-IR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fa-IR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fi-FI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fi-FI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fi-FI.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fr-FR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fr-FR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-fr-FR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-gl-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-gl-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-gl-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-he-IL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-he-IL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-he-IL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hr-HR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hr-HR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hr-HR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hu-HU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hu-HU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-hu-HU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-id-ID.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-id-ID.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-id-ID.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-it-IT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-it-IT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-it-IT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ja-JP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ja-JP.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ja-JP.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ko-KR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ko-KR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ko-KR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LV.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-lt-LV.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-mn-MN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-mn-MN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-mn-MN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nb-NO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nb-NO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nb-NO.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nl-NL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nl-NL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-nl-NL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pl-PL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pl-PL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pl-PL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-BR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-BR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-PT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-pt-PT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ro-RO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ro-RO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ro-RO.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ru-RU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ru-RU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ru-RU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sk-SK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sk-SK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sk-SK.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sl-SI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sl-SI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sl-SI.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS-Latin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS-Latin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS-Latin.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sr-RS.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sv-SE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sv-SE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-sv-SE.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ta-IN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ta-IN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-ta-IN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-th-TH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-th-TH.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-th-TH.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-tr-TR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-tr-TR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-tr-TR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uk-UA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uk-UA.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uk-UA.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uz-UZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uz-UZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-uz-UZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-vi-VN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-vi-VN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-vi-VN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-CN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-CN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-TW.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/lang/summernote-zh-TW.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/plugin/databasic/summernote-ext-databasic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/plugin/databasic/summernote-ext-databasic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/plugin/hello/summernote-ext-hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/plugin/specialchars/summernote-ext-specialchars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-bs4.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote-lite.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/adminlte/plugins/summernote/summernote.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/css/style-index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/currency/currency.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/brands.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/svg-with-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/svg-with-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/v4-shims.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/css/v4-shims.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/fontawesome/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/jquery/jquery-3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/money-format/simple.money.format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/pagination/jquery.simplePagination.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/pagination/simplePagination.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/toastr/toastr.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/toastr/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/daisy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/grab.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/grabbed.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/jquery.zoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/jquery.zoom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/static/vendor/zoom-master/roxy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/detail_tindangban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/detail_tindangban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/tindangban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/tindangban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/tindangban_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangban/tindangban_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangthue/tindangthue.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangthue/tindangthue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangthue/tindangthue_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/admin/tindangthue/tindangthue_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/product-tindangban.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/product-tindangban.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/product-tindangthue.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/home/product-tindangthue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/users/account_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../batdongsan/src/main/resources/templates/users/account_form.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CCxseCoKP0ubrpnf7yAAVWTbFP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/E/Java07/demo/spring-app-demo-master",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2075a055-71f0-443c-adeb-138becc61e49" name="Changes" comment="" />
+      <created>1658320575495</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658320575495</updated>
+      <workItem from="1658320576824" duration="61000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

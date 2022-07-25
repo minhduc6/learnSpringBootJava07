@@ -55,6 +55,9 @@ public class TinDangThueController {
         page = tinDangThueRepository.findAllByTitleContains(keyword,pageable);
 
         List<TinDangThue> tinDangThueList = page.getContent();
+        if(page.getContent().isEmpty()){
+            model.addAttribute("khongCoTinDang","empty");
+        }
         long totalItems = page.getTotalElements();
         int totalPages = page.getTotalPages();
         model.addAttribute("currentPage",currentPage);
@@ -80,6 +83,7 @@ public class TinDangThueController {
         TinDangThue tinDangThue = tinDangThueRepository.findById(id).get();
         model.addAttribute("categories", loaiNhaDatRepository.findLoaiNhaDatsByDanhMuc(danhMucRepository.findById(2).get()));
         model.addAttribute("tindangthueRequest", tinDangThue);
+        model.addAttribute("editTitle","Edit");
         return "admin/tindangthue/tindangthue_form";
     }
 

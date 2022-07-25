@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.LocalDateTime;
 
@@ -53,8 +54,12 @@ public class LoaiNhaDatController {
     }
 
     @GetMapping("/loainhadat/delete/{id}")
-    public String deleteLoaiNhaDat(@PathVariable(name = "id") Integer id){
-        loaiNhaDatRepository.deleteById(id);
+    public String deleteLoaiNhaDat(@PathVariable(name = "id") Integer id, RedirectAttributes redirectAttributes){
+        try{
+            loaiNhaDatRepository.deleteById(id);
+        }catch (RuntimeException e){
+            redirectAttributes.addFlashAttribute("message", "Không thể xoá vì Loại Nhà Đất có tồn tại bài viết");
+        }
         return "redirect:/admin/loainhadat";
     }
 

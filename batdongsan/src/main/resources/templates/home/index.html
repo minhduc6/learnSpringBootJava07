@@ -10,7 +10,7 @@
             href="assest/logobackground/logo/logonhadatFix.png"
             type="image/x-icon"
     />
-    <link rel="stylesheet" th:href="@{/css/style-index.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style-index1.css}"/>
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -32,6 +32,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js" />
     <title>Nhà Đất Xanh</title>
 </head>
 <body>
@@ -53,7 +54,7 @@
             <div class="container--desktop wrap__header">
                 <div class="logo">
                     <div class="logo__text">
-                        <a href="index.html"
+                        <a th:href="@{/trang-chu}"
                         >
                             <div class="logo__branch">Greenland</div>
                         </a
@@ -64,53 +65,72 @@
                 <nav class="wrap__nav">
                     <ul class="nav__menu">
                         <li class="nav__menu__items">
-                            <a href="about.html" class="nav__menu__item__link"
+                            <a th:href="@{/trang-chu/about}" class="nav__menu__item__link"
                             >Giới Thiệu</a
                             >
                         </li>
                         <li class="nav__menu__items">
-                            <a href="product-tindangban.html" class="nav__menu__item__link"
+                            <a th:href="@{/trang-chu/tindangban}" class="nav__menu__item__link"
                             >Nhà Bán</a
                             >
                         </li>
                         <li class="nav__menu__items">
-                            <a href="about.html" class="nav__menu__item__link"
+                            <a th:href="@{/trang-chu/tindangthue}" class="nav__menu__item__link"
                             >Nhà Cho Thuê</a
                             >
                         </li>
                         <li class="nav__menu__items">
-                            <a href="news.html" class="nav__menu__item__link">Tin Tức</a>
+                            <a  th:href="@{/trang-chu/tintuc}" class="nav__menu__item__link">Tin Tức</a>
                         </li>
                         <li class="nav__menu__items">
                             <th:block sec:authorize="isAnonymous()">
                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                    Đăng Nhập
+                                    <a th:href="@{/login}">Đăng nhập</a>
+                                </button>
+                            </th:block>
+
+                            <th:block sec:authorize="isAnonymous()">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a th:href="@{/register}">Đăng Ký</a>
                                 </button>
                             </th:block>
 
                             <th:block sec:authorize="isAuthenticated()">
+<!--                                    <div class="dropdown">-->
+<!--                                        <button class="btn btn-secondary dropdown-toggle" type="button"-->
+<!--                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"-->
+<!--                                                aria-expanded="false">-->
+<!--                                            Dropdown button-->
+<!--                                        </button>-->
+<!--                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--                                            <li><a th:href="@{/account}" sec:authentication="principal.fullname"></a>-->
+<!--                                            </li>-->
+<!--                                            <span></span>-->
+<!--                                            <li><a href="" id="logoutLink" class="dropdown-item">-->
+<!--                                                <div class="media">-->
+<!--                                                    Đăng xuất-->
+<!--                                                </div>-->
+<!--                                            </a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
                                 <div class="dropdown">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                            Dropdown button
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a th:href="@{/account}" sec:authentication="principal.fullname"></a>
-                                            </li>
-                                            <span></span>
-                                            <li><a href="" id="logoutLink" class="dropdown-item">
-                                                <div class="media">
-                                                    Đăng xuất
-                                                </div>
-                                            </a></li>
-                                        </ul>
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a th:href="@{/account}" sec:authentication="principal.fullname"></a>
+                                        <a th:href="@{/dangtin/dangtinban}" class="dropdown-item" >Đăng Bài Mua Bán</a>
+                                        <a th:href="@{/dangtin/dangtinthue}" class="dropdown-item" >Đăng Bài Thuê</a>
+                                        <a  id="logoutLink" class="dropdown-item" href="#">
+                                            <div class="media">
+                                                Đăng xuất
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </th:block>
-
                         </li>
                     </ul>
                 </nav>
@@ -118,22 +138,20 @@
         </header>
         <div class="banner">
             <div class="banner__wrap__searchbar d-flex justify-content-center">
-
-            </div>
-
-            <form method="GET" th:action="@{/trang-chu/timkiem}" th:object="${timKiemRequest}">
-                <input type="hidden" id= "inputThanhPho" th:field="*{thanhPho}" />
-                <input type="hidden"  id= "inputQuanHuyen" th:field="*{quanHuyen}" />
-                <input type="hidden" id= "inputPhuong" th:field="*{phuongXa}" />
-                <div class="d-flex justify-content-center">
-                    <div style="width: 1000px" class="banner__searchbar row">
+                <form th:action="@{/trang-chu/timkiem}"  th:object="${timKiemRequest}" method="get">
+                    <input type="hidden" id="inputThanhPho" th:field="*{thanhPho}"/>
+                    <input type="hidden" id="inputQuanHuyen" th:field="*{quanHuyen}"/>
+                    <input type="hidden" id="inputPhuong" th:field="*{phuongXa}"/>
+                    <div class="banner__searchbar row">
                         <div class="banner__searchbar__wrap__btn col-9">
-                            <input  th:field="*{keyword}" type="search" class="form-control" placeholder="Nhập Từ Khoá Cần Tìm Kiếm"
+                            <input th:field="*{keyword}" type="search" class="form-control"
+                                   placeholder="Nhập Từ Khoá Cần Tìm Kiếm"
                                    aria-label="Search" aria-describedby="search-addon"/>
-                        </div>
+                            <div id="error" style="display: none" class="text-danger" th:if="${#fields.hasErrors('all')}" th:errors="*{all}">All Error</div>
 
+                        </div>
                         <div class="banner__searchbar__wrap__btn col-3">
-                            <button
+                            <button id="btnTimKiem"
                                     style="width: 85px;height: 50px;margin-left: 40px"
                                     type="submit"
                                     class="btn__searchbar"
@@ -142,10 +160,8 @@
                             </button>
                         </div>
                     </div>
-                </div>
 
-                <div  class="d-flex justify-content-center">
-                    <div style="width: 1000px" class="banner__searchbar row">
+                    <div class="banner__searchbar row">
                         <div class="banner__searchbar__items col-2">
                             <p class="banner__searchbar__item__title">Thành Phố</p>
                             <select id="city"
@@ -184,13 +200,14 @@
                         </div>
                         <div id="change" class="banner__searchbar__items col-2">
                             <p class="banner__searchbar__item__title">Loại nhà</p>
-                            <select id="loaiNhaDat" th:field="*{loaiNha_id}"
+                            <select id="loaiNhaDat" th:field="*{loaiNha_id}" name="loaiNha_id"
                                     class="
                     form-select-menu
                     banner__searchbar__item__select
                     form-select
                   "
                             >
+                                <option value="">Chọn</option>
                                 <option th:each="lnd : ${loaiNhaDat}"
                                         th:value="${lnd.id}"
                                         th:text="${lnd.name}"/>
@@ -198,24 +215,24 @@
                         </div>
                         <div class="banner__searchbar__items col-2">
                             <p class="banner__searchbar__item__title">Khoảng chi phí</p>
-                            <select id="giaBan" th:field="*{muaGia}"
+                            <select id="giaBan" th:field="*{muaGia}" name="muaGia"
                                     class="
                     form-select-menu
                     banner__searchbar__item__select
                     form-select
                   "
                             >
-                                <option th:value="0" selected>Chọn</option>
-                                <option th:value="'0-1'">Nhỏ hơn 1 Tỷ</option>
-                                <option th:value="'1-2'">1 - 2 Tỷ</option>
-                                <option th:value="'2-3'">2 - 3 Tỷ</option>
-                                <option th:value="'3-5'">3 - 5 Tỷ</option>
-                                <option th:value="'5-100'">Trên 5 Tỷ</option>
+                                <option value="" selected>Chọn</option>
+                                <option value="0-1">Nhỏ hơn 1 Tỷ</option>
+                                <option value="1-2">1 - 2 Tỷ</option>
+                                <option value="2-3">2 - 3 Tỷ</option>
+                                <option value="3-5">3 - 5 Tỷ</option>
+                                <option value="5-100">Trên 5 Tỷ</option>
                             </select>
                         </div>
                         <div class="banner__searchbar__items col-2">
                             <p class="banner__searchbar__item__title">Diện Tích</p>
-                            <select th:field="*{dienTich}"
+                            <select th:field="*{dienTich}" name="dienTich"
                                     class="
                     form-select-menu
                     banner__searchbar__item__select
@@ -230,8 +247,8 @@
                             </select>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
         <!-- End Header Desktop -->
@@ -840,7 +857,7 @@
                         <div class="col-3 border-l border-r about__content__item--mobile">
                             <a href="about.html">
                                 <img
-                                        src="assest/logobackground/icon-gioi-thieu/icon-thanhlap.svg"
+                                        th:src="@{/assest/logobackground/icon-gioi-thieu/icon-thanhlap.svg}"
                                         alt=""
                                 />
                                 <p>THÀNH LẬP</p>
@@ -849,7 +866,7 @@
                         <div class="col-3 border-l border-r about__content__item--mobile">
                             <a href="about.html">
                                 <img
-                                        src="assest/logobackground/icon-gioi-thieu/icon-sumenh.svg"
+                                        th:src="@{/assest/logobackground/icon-gioi-thieu/icon-sumenh.svg}"
                                         alt=""
                                 />
                                 <p>SỨ MỆNH</p>
@@ -858,7 +875,7 @@
                         <div class="col-3 border-l border-r about__content__item--mobile">
                             <a href="about.html">
                                 <img
-                                        src="assest/logobackground/icon-gioi-thieu/icon-tamnhin.svg"
+                                        th:src="@{/assest/logobackground/icon-gioi-thieu/icon-tamnhin.svg}"
                                         alt=""
                                 />
                                 <p>TẦM NHÌN</p>
@@ -867,7 +884,7 @@
                         <div class="col-3 border-l border-r about__content__item--mobile">
                             <a href="about.html">
                                 <img
-                                        src="assest/logobackground/icon-gioi-thieu/icon-giatri.svg"
+                                        th:src="@{/assest/logobackground/icon-gioi-thieu/icon-giatri.svg}"
                                         alt=""
                                 />
                                 <p>GIÁ TRỊ</p>
@@ -997,7 +1014,7 @@
                             <div class="member__list--desktop">
                                 <div class="member__photo--desktop">
                                     <div class="member__photo__inner--desktop">
-                                        <img src="assest/member/avatar-1.jpg" alt=""/>
+                                        <img th:src="@{/assest/member/avatar-1.jpg}" alt=""/>
                                     </div>
                                 </div>
                                 <div class="member__info--desktop">
@@ -1010,7 +1027,7 @@
                             <div class="member__list--desktop">
                                 <div class="member__photo--desktop">
                                     <div class="member__photo__inner--desktop">
-                                        <img src="assest/member/avatar-2.jpg" alt=""/>
+                                        <img th:src="@{/assest/member/avatar-2.jpg}" alt=""/>
                                     </div>
                                 </div>
                                 <div class="member__info--desktop">
@@ -1023,7 +1040,7 @@
                             <div class="member__list--desktop">
                                 <div class="member__photo--desktop">
                                     <div class="member__photo__inner--desktop">
-                                        <img src="assest/member/avatar-3.jpg" alt=""/>
+                                        <img th:src="@{/assest/member/avatar-3.jpg}" alt=""/>
                                     </div>
                                 </div>
                                 <div class="member__info--desktop">
@@ -1036,7 +1053,7 @@
                             <div class="member__list--desktop">
                                 <div class="member__photo--desktop">
                                     <div class="member__photo__inner--desktop">
-                                        <img src="assest/member/avatar-4.jpg" alt=""/>
+                                        <img th:src="@{/assest/member/avatar-4.jpg}" alt=""/>
                                     </div>
                                 </div>
                                 <div class="member__info--desktop">
@@ -1061,7 +1078,7 @@
                             <div class="col6-l">
                                 <a href="news.html"
                                 ><img
-                                        src="assest/news/news1.png"
+                                        th:src="@{/assest/news/news1.png}"
                                         alt=""
                                         class="news--mobile__item__img"
                                 /></a>
@@ -1084,7 +1101,7 @@
                             <div class="col6-l">
                                 <a href="news.html"
                                 ><img
-                                        src="assest/news/new2.png"
+                                        th:src="@{/assest/news/news2.png}"
                                         alt=""
                                         class="news--mobile__item__img"
                                 /></a>
@@ -1107,7 +1124,7 @@
                             <div class="col6-l">
                                 <a href="news.html"
                                 ><img
-                                        src="assest/news/new3.png"
+                                        th:src="@{/assest/news/news3.png}"
                                         alt=""
                                         class="news--mobile__item__img"
                                 /></a>
@@ -1173,120 +1190,62 @@
         </div>
         <!-- End footer mobile -->
     </div>
-    <!-- End mobile -->
-    <!-- Script -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-    ></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script
-            type="text/javascript"
-            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            $("#logoutLink").on("click", function (e) {
-                e.preventDefault();
-                document.logoutForm.submit();
-            });
+</div>
+<!-- End mobile -->
+<!-- Script -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#logoutLink").on("click", function (e) {
+            e.preventDefault();
+            document.logoutForm.submit();
         });
-
-        $("#loaiNhaDat").change(function () {
-            console.log($( "#loaiNhaDat option:selected" ).text())
-            var temp = $( "#loaiNhaDat option:selected" ).text();
-            let result = temp.includes("Thuê");
-            console.log(result)
-            if(result == true){
-                $('select option:contains("Nhỏ hơn 1 Tỷ")').text('Nhỏ hơn 1 Triệu');
-                $('select option:contains("1 - 2 Tỷ")').text('1 - 2 Triệu');
-                $('select option:contains("2 - 3 Tỷ")').text('2 - 3 Triệu');
-                $('select option:contains("3 - 5 Tỷ")').text('3 - 5 Triệu');
-                $('select option:contains("Trên 5 Tỷ")').text('Trên 5 Triệu');
-            }
-            if(result == false){
-                $('select option:contains("Nhỏ hơn 1 Triệu")').text('Nhỏ hơn 1 Tỷ');
-                $('select option:contains("1 - 2 Triệu")').text('1 - 2 Tỷ');
-                $('select option:contains("2 - 3 Triệu")').text('2 - 3 Tỷ');
-                $('select option:contains("3 - 5 Triệu")').text('3 - 5 Tỷ');
-                $('select option:contains("Trên 5 Triệu")').text('Trên 5 Tỷ');
-            }
+    });
 
 
-        });
-
-
-        function renderTPho() {
-            var citis = document.getElementById("city");
-            var districts = document.getElementById("district");
-            var wards = document.getElementById("ward");
-            var Parameter = {
-                url: "/data/data.json", //Đường dẫn đến file chứa dữ liệu hoặc api do backend cung cấp
-                method: "GET", //do backend cung cấp
-                responseType: "application/json", //kiểu Dữ liệu trả về do backend cung cấp
-            };
-//gọi ajax = axios => nó trả về cho chúng ta là một promise
-            var promise = axios(Parameter);
-//Xử lý khi request thành công
-            promise.then(function (result) {
-                renderCity(result.data);
-            });
-
-            function renderCity(data) {
-                for (const x of data) {
-                    citis.options[citis.options.length] = new Option(x.Name, x.Id);
-                }
-
-                // xứ lý khi thay đổi tỉnh thành thì sẽ hiển thị ra quận huyện thuộc tỉnh thành đó
-                citis.onchange = function () {
-                    district.length = 1;
-                    ward.length = 1;
-                    if (this.value != "") {
-                        const result = data.filter(n => n.Id === this.value);
-
-                        for (const k of result[0].Districts) {
-                            district.options[district.options.length] = new Option(k.Name, k.Id);
-                        }
-                    }
-                };
-
-                // xứ lý khi thay đổi quận huyện thì sẽ hiển thị ra phường xã thuộc quận huyện đó
-                district.onchange = function () {
-                    ward.length = 1;
-                    const dataCity = data.filter((n) => n.Id === citis.value);
-                    if (this.value != "") {
-                        const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
-
-                        for (const w of dataWards) {
-                            wards.options[wards.options.length] = new Option(w.Name, w.Id);
-                        }
-                    }
-                };
-            }
-
-
+    $("#loaiNhaDat").change(function () {
+        console.log($("#loaiNhaDat option:selected").text())
+        var temp = $("#loaiNhaDat option:selected").text();
+        let result = temp.includes("Thuê");
+        console.log(result)
+        if (result == true) {
+            $('select option:contains("Nhỏ hơn 1 Tỷ")').text('Nhỏ hơn 1 Triệu');
+            $('select option:contains("1 - 2 Tỷ")').text('1 - 2 Triệu');
+            $('select option:contains("2 - 3 Tỷ")').text('2 - 3 Triệu');
+            $('select option:contains("3 - 5 Tỷ")').text('3 - 5 Triệu');
+            $('select option:contains("Trên 5 Tỷ")').text('Trên 5 Triệu');
         }
+        if (result == false) {
+            $('select option:contains("Nhỏ hơn 1 Triệu")').text('Nhỏ hơn 1 Tỷ');
+            $('select option:contains("1 - 2 Triệu")').text('1 - 2 Tỷ');
+            $('select option:contains("2 - 3 Triệu")').text('2 - 3 Tỷ');
+            $('select option:contains("3 - 5 Triệu")').text('3 - 5 Tỷ');
+            $('select option:contains("Trên 5 Triệu")').text('Trên 5 Tỷ');
+        }
+    });
 
 
-        $("#city").change(function() {
-            $("#inputThanhPho").val($("#city option:selected").text());
-        });
+    $("#city").change(function () {
+        $("#inputThanhPho").val($("#city option:selected").text());
+    });
 
-        $("#district").change(function() {
-            $("#inputQuanHuyen").val($( "#district option:selected").text());
-        });
+    $("#district").change(function () {
+        $("#inputQuanHuyen").val($("#district option:selected").text());
+    });
 
-        $("#ward").change(function() {
-            $("#inputPhuong").val($( "#ward option:selected").text());
-        });
-    </script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    $("#ward").change(function () {
+        $("#inputPhuong").val($("#ward option:selected").text());
+    });
+    if ($("#error").text() == 'Vui lòng điền đủ thông tin 3 trường loại nhà mức giá diện tích') {
+        alert('Vui lòng điền đủ thông tin 3 trường loại nhà mức giá diện tích')
+    }
 
-    <script th:src="@{/js/index.js}"></script>
+</script>
+<script th:src="@{/js/home.js}"></script>
 </body>
 </html>

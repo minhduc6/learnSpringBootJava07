@@ -44,6 +44,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority("Admin")
                 .antMatchers("/trang-chu/**").permitAll()
+                .antMatchers("/register/**").permitAll()
+                .antMatchers("/account/quen-mat-khau/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .anonymous()
@@ -64,8 +66,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**","/assest/**","/css/**","/js/**"
-        ,"/tindangban-photo/**","/tindangthue-photo/**","/data/**");
+        return (web) -> web.ignoring().antMatchers("/images/**", "/webjars/**","/assest/**","/css/**","/js/**"
+        ,"/tindangban-photo/**","/tindangthue-photo/**","/data/**","/static/**");
     }
 
 }

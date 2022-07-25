@@ -15,9 +15,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.Period;
@@ -38,31 +41,34 @@ public class TinDangBanController {
 
     @GetMapping("/tindangban")
     public String getAll(Model model) {
-       return listByPage(1,model,"");
+        return listByPage(1, model, "");
     }
 
     @GetMapping("/tindangban/search")
-    public String getTinDangBanSearch(Model model,@RequestParam String keyword) {
-        return listByPage(1,model,keyword);
+    public String getTinDangBanSearch(Model model, @RequestParam String keyword) {
+        return listByPage(1, model, keyword);
     }
 
     @GetMapping("/tindangban/page/{pageNumber}")
     public String listByPage(@PathVariable("pageNumber") int pageNumber, Model model,
-                             @RequestParam String keyword){
+                             @RequestParam String keyword) {
         int currentPage = pageNumber;
 
-        Page<TinDangBan> page ;
-        Pageable pageable = PageRequest.of(pageNumber-1,3);
-        page = tinDangBanRepository.findAllByTitleContains(keyword,pageable);
+        Page<TinDangBan> page;
+        Pageable pageable = PageRequest.of(pageNumber - 1, 3);
+        page = tinDangBanRepository.findAllByTitleContains(keyword, pageable);
 
         List<TinDangBan> tinDangBanList = page.getContent();
+        if(page.getContent().isEmpty()){
+            model.addAttribute("khongCoTinDang","empty");
+        }
         long totalItems = page.getTotalElements();
         int totalPages = page.getTotalPages();
-        model.addAttribute("currentPage",currentPage);
-        model.addAttribute("totalItems",totalItems);
-        model.addAttribute("totalPages",totalPages);
-        model.addAttribute("listTinDangBan",tinDangBanList);
-        model.addAttribute("keyword",keyword);
+        model.addAttribute("currentPage", currentPage);
+        model.addAttribute("totalItems", totalItems);
+        model.addAttribute("totalPages", totalPages);
+        model.addAttribute("listTinDangBan", tinDangBanList);
+        model.addAttribute("keyword", keyword);
         return "admin/tindangban/tindangban";
     }
 
@@ -81,6 +87,7 @@ public class TinDangBanController {
         TinDangBan tinDangBan = tinDangBanRepository.findById(id).get();
         model.addAttribute("categories", loaiNhaDatRepository.findLoaiNhaDatsByDanhMuc(danhMucRepository.findById(1).get()));
         model.addAttribute("tindangbanRequest", tinDangBan);
+        model.addAttribute("editTitle","Edit");
         return "admin/tindangban/tindangban_form";
     }
 
@@ -91,7 +98,7 @@ public class TinDangBanController {
                              @RequestParam("photo2File") MultipartFile multipartFile3,
                              @RequestParam("photo3File") MultipartFile multipartFile4) throws IOException {
         if (!multipartFile1.isEmpty()) {
-            String fileName = StringUtils.cleanPath(multipartFile1.getOriginalFilename());
+            String fileName = StringUtils.cleanPath(    multipartFile1.getOriginalFilename());
             tinDangBan.setMainPhoto(fileName);
 
             String uploadDir = "tindangban-photo/" + tinDangBan.getId();

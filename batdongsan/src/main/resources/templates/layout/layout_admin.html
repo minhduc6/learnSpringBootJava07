@@ -77,7 +77,7 @@
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <li class="nav-item has-treeview">
-                                <a href="/admin" class="nav-link">
+                                <a th:href="@{/admin/danhmuc}" class="nav-link">
                                     <i class="nav-icon fas fa-chart-line"></i>
                                     <p>
                                         Dashboard
@@ -86,7 +86,7 @@
                             </li>
                             <li class="nav-item has-treeview">
                                 <a th:href="@{/admin/danhmuc}" class="nav-link">
-                                    <i class="nav-icon fas fa-shopping-cart"></i>
+                                    <i class="nav-icon fas fa-bars"></i>
                                     <p>
                                         Quản lý Danh Mục
                                         <i class="fas fa-angle-left right"></i>
@@ -95,63 +95,36 @@
                             </li>
 
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class='nav-icon fab fa-centos'></i>
+                                <a th:href="@{/admin/loainhadat}" class="nav-link">
+                                    <i class='nav-icon fas fa-bars'></i>
                                     <p>
                                         Quản lý các Loại Nhà Đất
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class='nav-icon fab fa-centos'></i>
+                                <a th:href="@{/admin/tindangthue}" class="nav-link">
+                                    <i class='nav-icon fas fa-home'></i>
                                     <p>
                                         Quản lý Đăng tin cho thuê
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class='nav-icon fab fa-centos'></i>
+                                <a th:href="@{/admin/tindangban}" class="nav-link">
+                                    <i class='nav-icon fas fa-home'></i>
                                     <p>
                                         Quản lý Đăng tin cho bán
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="/admin/posts" class="nav-link">
-                                    <i class="nav-icon fas fa-file"></i>
+                                <a th:href="@{/admin/users}" class="nav-link">
+                                    <i class='nav-icon fas fa-user'></i>
                                     <p>
-                                        Quản lý blog
-                                        <i class="fas fa-angle-left right"></i>
+                                        Quản lý Người Dùng
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="/admin/posts" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Danh sách bài viết</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="/admin/posts/create" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Tạo bài viết mới</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item has-treeview">
-                                <a th:href="@{/admin/users}"class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Quản lý user
-                                        <i class="fas fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-
-                                </ul>
                             </li>
                             <li class="nav-item has-treeview">
                                 <a href="/admin/config" class="nav-link">

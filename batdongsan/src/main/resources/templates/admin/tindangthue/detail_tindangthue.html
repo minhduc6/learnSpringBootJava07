@@ -23,9 +23,8 @@
 <div class="container-fluid">
     <main id="main-content">
         <div class="main__link__nav">
-            <a href="index.html" class="page-nav-link">Trang chủ</a> >
-            <a href="product.html" class="page-nav-link">Nhà Bán</a> >
-            <a href="productitem.html" class="page-nav-link page-nav-link__active"
+            <a th:href="@{/admin/tindangthue}" class="page-nav-link">Nhà Thuê</a> >
+            <a href="#" class="page-nav-link page-nav-link__active"
             >[[${tindangthue.title}]]</a
             >
         </div>
@@ -76,11 +75,26 @@
                             </div>
                             <div class="col-3">
                                 <div class="content-font">Phòng ngủ</div>
-                                <div class="content-header">[[${tindangthue.soPhongNgu}]] </div>
+                                <div class="content-header">[[${tindangthue.soPhongNgu}]] Phòng</div>
                             </div>
                             <div class="col-3">
                                 <div class="content-font">Phòng Toilet</div>
-                                <div class="content-header">[[${tindangthue.soPhongToilet}]] </div>
+                                <div class="content-header">[[${tindangthue.soPhongToilet}]] Phòng</div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="content-font">Số Tầng :</div>
+                                <div class="content-header">[[${tindangthue.soTang}]] Tầng</div>
+                            </div>
+                            <div class="col-3">
+                                <div class="content-font">Nội Thất :</div>
+                                <div class="content-header">[[${tindangthue.noiThat}]] </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="content-font">Số điện thoại liện hệ</div>
+                                <div class="content-header">[[${tindangthue.sdt}]]</div>
                             </div>
                         </div>
                     </div>
