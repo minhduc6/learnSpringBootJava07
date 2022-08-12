@@ -22,6 +22,8 @@ public class LoaiNhaDatController {
     private LoaiNhaDatRepository loaiNhaDatRepository;
     @Autowired
     private DanhMucRepository danhMucRepository;
+
+
     @GetMapping("/loainhadat")
     public String getAll(Model model){
         model.addAttribute("listLoaiNhaDat",loaiNhaDatRepository.findAll());

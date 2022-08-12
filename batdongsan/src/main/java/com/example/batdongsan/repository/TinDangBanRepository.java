@@ -60,6 +60,20 @@ public interface TinDangBanRepository extends CrudRepository<TinDangBan,Integer>
                                              @Param("loaiNhaDat_id")int loaiNhaDat_id
                                              ,Pageable pageable);
 
+    @Query(
+            value = "SELECT * FROM tin_dang_ban t where t.gia_ban >= :minGiaBan and t.gia_ban <= :maxGiaBan and  LOCATE(:keyword,t.title) > 0 " +
+                    " OR LOCATE(:keyword,t.mo_ta) > 0 and t.dien_tich >= :minDienTich and t.dien_tich <= :maxDienTich and t.thanh_pho = :thanhPho and t.quan_huyen = :quanHuyen and t.phuong = :phuongXa and t.loai_nha_dat_id = :loaiNhaDat_id",
+            nativeQuery = true)
+    List<TinDangBan> timKiemTinDangBanZ(@Param("minGiaBan")double minGiaBan,
+                                       @Param("maxGiaBan")double maxGiaBan,
+                                       @Param("keyword")String keyword,
+                                       @Param("thanhPho") String thanhPho,
+                                       @Param("quanHuyen")String quanHuyen,
+                                       @Param("phuongXa") String phuongXa,
+                                       @Param("minDienTich")double minDienTich,
+                                       @Param("maxDienTich")double maxDienTich,
+                                       @Param("loaiNhaDat_id")int loaiNhaDat_id);
+
 
 
     

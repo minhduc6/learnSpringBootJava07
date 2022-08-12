@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4606e462-33b5-4e82-bfb9-13cdb8b9ad5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Applicant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Applicant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Employer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Employer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/model/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/service/ApplicantServiceImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/java/vn/techmaster/job_hunt/service/ApplicantServiceImple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/src/main/resources/static/logo/fpt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/static/logo/fpt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Applicant.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Applicant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Employer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Employer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/model/Job.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/service/ApplicantServiceImple.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JobHuntConvertJPA/JobHunt/target/classes/vn/techmaster/job_hunt/service/ApplicantServiceImple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../batdongsan/src/main/java/com/example/batdongsan/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../batdongsan/src/main/java/com/example/batdongsan/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../batdongsan/src/main/resources/templates/layout/layout_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../batdongsan/src/main/resources/templates/layout/layout_admin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,14 +19,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/E/Java07/demoJPA/demoJPA"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/E/Java07/demoJPA/demoJPA&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +37,7 @@
       <updated>1652446394126</updated>
       <workItem from="1652446396411" duration="47000" />
       <workItem from="1654267507198" duration="6000" />
+      <workItem from="1659163788799" duration="4000" />
     </task>
     <servers />
   </component>

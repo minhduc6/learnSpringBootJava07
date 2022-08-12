@@ -18,8 +18,8 @@
     <div class="row">
       <div class="col-12">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-          <li class="breadcrumb-item"><a href="/admin/products">Danh sách sản phẩm</a></li>
+          <li class="breadcrumb-item"><a th:href="@{/trang-chu}">Dashboard</a></li>
+          <li class="breadcrumb-item"><a th:href="@{/dangtin/dangtinthue}">Danh sách sản phẩm</a></li>
           <li class="breadcrumb-item active">Thêm sản phẩm mới</li>
         </ol>
       </div>
@@ -27,7 +27,7 @@
 
     <!-- Toolbar -->
     <div class="toolbar">
-      <a role="button" class="btn btn-default" href="/admin/products">
+      <a role="button" class="btn btn-default" th:href="@{/dangtin/dangtinthue}">
         <span class="fas fa-chevron-left" style="margin-right:0.5rem;"></span>
         <span>Trở về</span>
       </a>
@@ -430,7 +430,7 @@
           alert('Số điện thoại của bạn không đúng định dạng!');
           return false;
         } else {
-          alert('Số điện thoại của bạn hợp lệ!');
+          alert('Thành Công!');
           return true;
         }
       }
