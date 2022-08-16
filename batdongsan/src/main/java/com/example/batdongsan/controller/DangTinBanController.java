@@ -93,7 +93,12 @@ public class DangTinBanController {
 
     @GetMapping("/dangtinban/edit/{id}")
     public String editTinTuc(@PathVariable(name = "id") int id, Model model) {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (((BDSUserDetails) principal).getUser());
         TinDangBan tinDangBan = tinDangBanRepository.findById(id).get();
+        if(tinDangBan.getUser().getId() != user.getId()){
+            return "error/403";
+        }
         model.addAttribute("categories", loaiNhaDatRepository.findLoaiNhaDatsByDanhMuc(danhMucRepository.findById(1).get()));
         model.addAttribute("tindangbanRequest", tinDangBan);
         model.addAttribute("editTitle","Edit");
@@ -143,8 +148,15 @@ public class DangTinBanController {
     }
     @GetMapping("/dangtinban/delete/{id}")
     public String deleteTinTuc(@PathVariable(name = "id") int id, Model model) {
-        tinDangBanRepository.deleteById(id);
-        return "redirect:/dangtin/dangtinban";
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (((BDSUserDetails) principal).getUser());
+        TinDangBan tinDangBan = tinDangBanRepository.findById(id).get();
+        if(tinDangBan.getUser().getId() != user.getId()){
+            return "error/403";
+        }else{
+            tinDangBanRepository.deleteById(id);
+            return "redirect:/dangtin/dangtinban";
+        }
     }
 
     @GetMapping("/dangtinbanprivate")

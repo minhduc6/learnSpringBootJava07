@@ -42,7 +42,7 @@ public class ScanService {
         log.info("Scan Tin Dang Ban ${}",time);
     }
 
-    @Scheduled(cron = "*/30 * * * * *")
+    @Scheduled(cron = "*/60 * * * * *")
     private  void  scanTinDangThue(){
         List<TinDangThue> listTinDangThue = tinDangThueRepository.findAllByTinDangStatus(TinDangStatus.PUBLIC);
         LocalDateTime timeNow = LocalDateTime.now();
